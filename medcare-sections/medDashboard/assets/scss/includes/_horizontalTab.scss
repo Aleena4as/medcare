@@ -1,0 +1,73 @@
+.d-horizontalTabs {
+   /* Style the tab */
+   .horiTab {
+      overflow: hidden;
+      width: 392px;
+      height: 50px;
+      object-fit: contain;
+      border-radius: 6px;
+      background-color: $teritiary-color;
+      padding: 6px;
+   }
+
+   /* Style the buttons inside the tab */
+   .horiTab .horiTablinks {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 123px;
+      height: 38px;
+      object-fit: contain;
+      border-radius: 6px;
+      background-color: $teritiary-color;
+      font-family: Poppins-Regular;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 2.79;
+      letter-spacing: normal;
+      text-align: center;
+      color: #222;
+   }
+
+   /* Change background color of buttons on hover */
+   .horiTab .horiTablinks:hover {
+      background-color: #fff;
+   }
+
+   /* Create an active/current tablink class */
+   .horiTab .horiTablinks.active {
+      background-color: $primary-color;
+      color: #fff;
+   }
+
+   /* Style the tab content */
+   .horiTabcontent {
+      display: none;
+      padding: 6px 12px;
+      -webkit-animation: fadeEffect 1s;
+      animation: fadeEffect 1s;
+      height: fit-content;
+   }
+
+   /* Fade in tabs */
+   @-webkit-keyframes fadeEffect {
+      from {
+         opacity: 0;
+      }
+      to {
+         opacity: 1;
+      }
+   }
+
+   @keyframes fadeEffect {
+      from {
+         opacity: 0;
+      }
+      to {
+         opacity: 1;
+      }
+   }
+}

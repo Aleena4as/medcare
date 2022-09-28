@@ -1,0 +1,408 @@
+/* Font Color  */
+/* Box Shadow */
+/* Scroll */
+/* Media Query for Max-width */
+/* Media Query for Min-width */
+/* Media Query for Min & Max Width */
+/* Media Query for Max Height */
+/* Media Query for Min Height */
+/*======= Flex Functions and Prefix Start */
+/* Flex - Justify , Align */
+/*  Flex Justify */
+/*  Flex - Align */
+/* Flex Direction */
+/*======= Flex Functions and Prefix End */
+/*======= Position Property Start */
+/* Position Absolute Center */
+/* Position Zero */
+/*======= Position Property End */
+/*  Custom Overlay */
+/*  Transition */
+/*  ::before */
+/* Main Text */
+.footer-big ul {
+  padding: 0;
+  margin: 0;
+}
+
+.footer-big li {
+  list-style: none;
+}
+
+.footer-big a:focus,
+.footer-big a:hover {
+  text-decoration: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.footer-big a:focus {
+  outline: 0;
+}
+
+.footer-big {
+  padding: 63px 24px 85px;
+}
+
+.footer-big .footer-widget {
+  margin-bottom: 30px;
+}
+
+.footer--light {
+  background: #000000;
+}
+
+.footer-menu ul li a {
+  text-align: left;
+  font: normal normal 300 14px/24px Poppins;
+  letter-spacing: 0.7px;
+  color: #dfd6dc;
+  font-family: Poppins-Light;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-transform: capitalize;
+}
+
+.footer-menu ul li a:hover {
+  color: #ffffff;
+}
+
+.footer-menu--1 {
+  width: 100%;
+}
+
+@media (min-width: 767px) {
+  .footer-menu ul li {
+    padding: 2px 0;
+  }
+}
+
+.footer-widget-title {
+  text-align: left;
+  font: normal normal bold 16px/24px Poppins;
+  letter-spacing: 0.32px;
+  color: #dfd6dc;
+  font-family: Poppins-Bold;
+  text-transform: uppercase;
+}
+
+.m-subscribe-box {
+  border-radius: 8px;
+  background-color: transparent;
+  margin-bottom: 40px;
+}
+
+.m-subscribe-box .subscribe-title-box .subscribe-title-head {
+  text-align: left;
+  font: normal normal bold 16px/21px Poppins;
+  letter-spacing: 0.32px;
+  color: #f7f7f7;
+  margin-bottom: 5px;
+  font-family: Poppins-Bold;
+}
+
+.m-subscribe-box .subscribe-title-box .subscribe-title-text {
+  text-align: left;
+  font: normal normal normal 14px/21px Poppins;
+  letter-spacing: 0.28px;
+  color: #f7f7f7;
+  margin-bottom: 15px;
+  font-family: Poppins-Regular;
+}
+
+.m-subscribe-box .subscribe-input-box {
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+.m-subscribe-box .subscribe-input-box .privacy-statement {
+  font-family: Poppins-Light;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.24px;
+  text-align: left;
+  color: #f7f7f7;
+}
+
+.m-subscribe-box .subscribe-input-box .privacy-statement span {
+  color: #97005e;
+}
+
+.m-subscribe-box .subscribe-input-box input[type="text"] {
+  width: 80%;
+  padding: 8px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Poppins-Regular;
+  font-size: 14px;
+  border-radius: 15px;
+}
+
+@media (min-width: 768px) {
+  .m-subscribe-box .subscribe-input-box input[type="text"] {
+    width: 100%;
+  }
+}
+
+.m-subscribe-box .subscribe-input-box input[type="text"]::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font: normal normal normal 14px/24px Poppins;
+  letter-spacing: 0.28px;
+  color: #000000;
+  opacity: 0.43;
+  text-align: center;
+  font-family: Poppins-Regular;
+}
+
+.m-subscribe-box .subscribe-input-box input[type="text"]:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font: normal normal normal 14px/24px Poppins;
+  letter-spacing: 0.28px;
+  color: #000000;
+  opacity: 0.43;
+  text-align: center;
+  font-family: Poppins-Regular;
+}
+
+.m-subscribe-box .subscribe-input-box input[type="text"]::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font: normal normal normal 14px/24px Poppins;
+  letter-spacing: 0.28px;
+  color: #000000;
+  opacity: 0.43;
+  text-align: center;
+  font-family: Poppins-Regular;
+}
+
+.m-subscribe-box .subscribe-input-box input[type="text"]::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font: normal normal normal 14px/24px Poppins;
+  letter-spacing: 0.28px;
+  color: #000000;
+  opacity: 0.43;
+  text-align: center;
+  font-family: Poppins-Regular;
+}
+
+.m-subscribe-box .subscribe-input-box input[type="text"]:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font: normal normal normal 14px/24px Poppins;
+  letter-spacing: 0.28px;
+  color: #000000;
+  opacity: 0.43;
+  text-align: center;
+  font-family: Poppins-Regular;
+}
+
+.m-subscribe-box .subscribe-input-box input[type="text"]::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font: normal normal normal 14px/24px Poppins;
+  letter-spacing: 0.28px;
+  color: #000000;
+  opacity: 0.43;
+  text-align: center;
+  font-family: Poppins-Regular;
+}
+
+.m-subscribe-box .subscribe-input-box input[type="submit"] {
+  width: 100%;
+  padding: 8px 10px;
+  display: inline-block;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.m-subscribe-box .subscribe-input-box .checkbox-wrapper {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.m-subscribe-box .subscribe-input-box .checkbox-wrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.m-subscribe-box .subscribe-input-box .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #ffffff;
+  border: solid 1px #d7d7d7;
+  border-radius: 3px;
+}
+
+.m-subscribe-box .subscribe-input-box .checkbox-wrapper:hover input ~ .checkmark {
+  background-color: #ffffff;
+  border: solid 1px #d7d7d7;
+}
+
+.m-subscribe-box .subscribe-input-box .checkbox-wrapper input:checked ~ .checkmark {
+  background-color: #ffffff;
+  border: solid 1px #d7d7d7;
+}
+
+.m-subscribe-box .subscribe-input-box .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.m-subscribe-box .subscribe-input-box .checkbox-wrapper input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.m-subscribe-box .subscribe-input-box .checkbox-wrapper .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 10px;
+  border: solid #97005e;
+  border-width: 0 1px 1px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.m-subscribe-box .subscribe-input-box input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+}
+
+.m-subscribe-box .subscribe-input-box input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+.m-subscribe-box .subscribe-input-box .subscribe-checkbox-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 0;
+}
+
+.m-subscribe-box .subscribe-input-box .subscribe-checkbox-panel label {
+  font-family: Poppins-Light;
+  font-size: 12px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.24px;
+  text-align: left;
+  color: #f7f7f7;
+}
+
+.m-subscribe-box .subscribe-input-box .subscribe-btn-box {
+  margin: 2px 0 16px;
+  background-color: #97005e;
+  margin-bottom: 40px;
+  border-radius: 15px;
+  width: 80%;
+}
+
+@media (min-width: 768px) {
+  .m-subscribe-box .subscribe-input-box .subscribe-btn-box {
+    width: 100%;
+  }
+}
+
+.m-subscribe-box .subscribe-input-box .subscribe-btn-box .subscribe-btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: Poppins-Medium;
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* footer social icons  section begins here*/
+ul.approval-Panel {
+  margin-bottom: 18px;
+}
+
+ul.approval-Panel li {
+  display: inline;
+  margin-right: 10px;
+}
+
+ul.social-network {
+  list-style: none;
+  margin-left: 0 !important;
+  margin-bottom: 35px;
+}
+
+@media (max-width: 767px) {
+  ul.social-network {
+    margin-bottom: 32px;
+    margin-top: 28px;
+  }
+}
+
+ul.social-network li {
+  display: inline;
+  margin: 0 5px;
+}
+
+.social-circle li i {
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+}
+
+.social-circle li a:hover i,
+.triggeredHover {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms--transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.social-circle i {
+  color: #595959;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.copyrightText {
+  text-align: left;
+  font: normal normal normal 12px/18px Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  font-family: Poppins-Regular;
+}
+
+/* footer social icons  section ends here*/
+/*# sourceMappingURL=style.css.map */

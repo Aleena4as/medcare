@@ -1,0 +1,103 @@
+.fc .fc-button-group > .fc-button:focus,
+.fc .fc-button-group > .fc-button:active,
+.fc .fc-button-group > .fc-button.fc-button-active {
+   z-index: 1;
+   background-color: #97005e !important;
+}
+.fc .fc-button-group .fc-button {
+   outline: none;
+   border: none;
+}
+.fc .fc-button-primary:not(:disabled):active:focus,
+.fc .fc-button-primary:not(:disabled).fc-button-active:focus {
+   outline: none;
+   border: none;
+   box-shadow: 0 0 0 0 white;
+}
+.fc .fc-button-primary:not(:disabled):active,
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+   border-radius: 4px;
+   background-color: #97005e;
+}
+.fc .fc-button-primary {
+   background-color: #f7deed !important;
+   color: #222222;
+   text-transform: capitalize;
+   &:hover {
+      color: #97005e;
+   }
+}
+.fc .fc-button-primary:focus {
+   box-shadow: 0 0 0 0 white !important;
+}
+.fc-button-group {
+   border-radius: 4px;
+   background-color: #f7deed;
+   padding: 4px;
+}
+.fc-next-button:hover,
+.fc-next-button:focus,
+.fc-next-button:active,
+.fc-prev-button:hover,
+.fc-prev-button:focus,
+.fc-prev-button:active {
+   color: #ffffff !important;
+   background-color: #f7deed;
+   border: none;
+   outline: none;
+}
+.fc-today-button {
+   border: none !important;
+   padding: 10px !important;
+}
+.fc .fc-today-button.fc-button:disabled {
+   opacity: 0.65;
+   background-color: #97005e !important;
+   pointer-events: none;
+}
+.fc .fc-toolbar-title {
+   color: #97005e !important;
+}
+.fc th {
+   text-align: center;
+   font-family: Poppins-Regular;
+   font-size: 12px;
+   font-weight: normal;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: 1.5;
+   letter-spacing: normal;
+   text-align: center;
+   color: #970a5e;
+}
+.fc .fc-col-header-cell-cushion {
+   padding: 16px 4px;
+}
+.fc-scrollgrid-sync-inner a {
+   // color: #97005e !important;
+   font-size: 16px;
+   text-align: center;
+   font-family: Poppins-Regular;
+   font-weight: normal;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: 1.5;
+   letter-spacing: normal;
+   text-align: center;
+   color: #970a5e;
+}
+.fc-event-title,
+.fc-event-time {
+   color: #000000;
+}
+
+// .fc-time,
+// .fc-title {
+//    //display: inline-block;
+// }
+// .fc-view-harness .fc-view-harness-active {
+//    height: 100%;
+// }
+// .fc-view-harness .fc-view-harness-active{
+//    height: 1066.67px !important;
+// }

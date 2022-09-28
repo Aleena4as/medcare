@@ -1,0 +1,583 @@
+.dropNewEvent {
+   font-family: Roboto;
+   font-size: 13px;
+}
+
+.popoverTitleCalendar {
+   width: 100%;
+   height: 100%;
+   padding: 15px 15px;
+   font-family: Roboto;
+   font-size: 13px;
+   border-radius: 5px 5px 0 0;
+}
+
+.popoverInfoCalendar i {
+   font-size: 14px;
+   margin-right: 10px;
+   line-height: inherit;
+   color: #d3d4da;
+}
+
+.popoverInfoCalendar p {
+   margin-bottom: 1px;
+}
+
+.popoverDescCalendar {
+   margin-top: 12px;
+   padding-top: 12px;
+   border-top: 1px solid #e3e3e3;
+   overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+}
+
+.popover-title {
+   background: transparent;
+   font-weight: 600;
+   padding: 0 !important;
+   border: none;
+}
+
+.popover-content {
+   padding: 15px 15px;
+   font-family: Roboto;
+   font-size: 13px;
+}
+
+.inputModal {
+   width: 65%;
+   margin-bottom: 10px;
+}
+
+#contextMenu {
+   position: absolute;
+   display: none;
+   z-index: 2;
+}
+
+#contextMenu .dropdown-menu {
+   border: none;
+}
+
+.opacityWeekend {
+   background-color: #f4f4fb !important;
+}
+
+.fc-avatar-image {
+   top: 4px;
+   left: 20px;
+   height: 28px;
+   width: 28px;
+   border-radius: 50%;
+   position: absolute;
+   z-index: 2;
+}
+
+.fc-avatar-image img {
+   height: 28px;
+   width: 28px;
+   border-radius: 50%;
+}
+
+.fc-avatar-image:before {
+   content: none !important;
+}
+
+.fc-day-header {
+   text-transform: uppercase;
+   font-size: 13px;
+   font-family: Roboto;
+   font-weight: 500;
+   color: #505363;
+   background-color: #fafafa;
+   padding: 11px 0px !important;
+   text-decoration: none;
+}
+
+.fc-day-header a {
+   text-decoration: none !important;
+   color: #505363;
+}
+
+.fc-center h2 {
+   text-transform: uppercase;
+   font-size: 18px;
+   font-family: Roboto;
+   font-weight: 500;
+   color: #505363;
+   line-height: 32px;
+}
+
+.fc-toolbar.fc-header-toolbar {
+   margin-bottom: 22px;
+   padding-top: 22px;
+}
+
+.fc-agenda-view .fc-day-grid .fc-row .fc-content-skeleton {
+   padding-bottom: 1em;
+   padding-top: 1em;
+}
+
+.fc-day {
+   transition: all 0.2s linear;
+}
+
+.fc-day:hover {
+   background: #eef7ff;
+   cursor: pointer;
+   transition: all 0.2s linear;
+}
+
+.fc-highlight {
+   background: #eef7ff;
+   opacity: 0.7;
+}
+
+.fc-time-grid-event.fc-short .fc-time:before {
+   content: attr(data-start);
+   display: none;
+}
+
+.fc-time-grid-event.fc-short .fc-time span {
+   display: inline-block;
+}
+
+.fc-time-grid-event.fc-short .fc-avatar-image {
+   display: none;
+   transition: all 0.3s linear;
+}
+
+.fc-time-grid .fc-bgevent,
+.fc-time-grid .fc-event {
+   border: 1px solid #fff !important;
+}
+
+.fc-time-grid-event.fc-short .fc-content {
+   padding: 4px 20px 10px 22px !important;
+}
+
+.fc-time-grid-event .fc-avatar-image {
+   top: 9px;
+}
+
+.fc-event-vert {
+   min-height: 22px;
+}
+
+.fc .fc-axis {
+   vertical-align: middle;
+   padding: 0 4px;
+   white-space: nowrap;
+   font-size: 10px;
+   color: #505362;
+   text-transform: uppercase;
+   text-align: center !important;
+   background-color: #fafafa;
+}
+
+.fc-unthemed .fc-event .fc-content,
+.fc-unthemed .fc-event-dot .fc-content {
+   padding: 10px 20px 10px 22px;
+   font-family: "Roboto", sans-serif;
+   margin-left: -1px;
+   height: 100%;
+}
+
+.fc-event {
+   border: none !important;
+}
+
+.fc-day-grid-event .fc-time {
+   font-weight: 700;
+   text-transform: uppercase;
+}
+
+.fc-unthemed .fc-day-grid td:not(.fc-axis).fc-event-container {
+   padding: 0.2rem 0.5rem;
+}
+
+.fc-unthemed .fc-content,
+.fc-unthemed .fc-divider,
+.fc-unthemed .fc-list-heading td,
+.fc-unthemed .fc-list-view,
+.fc-unthemed .fc-popover,
+.fc-unthemed .fc-row,
+.fc-unthemed tbody,
+.fc-unthemed td,
+.fc-unthemed th,
+.fc-unthemed thead {
+   border-color: #dadfea;
+}
+
+.fc-ltr .fc-h-event .fc-end-resizer,
+.fc-ltr .fc-h-event .fc-end-resizer:before,
+.fc-ltr .fc-h-event .fc-end-resizer:after,
+.fc-rtl .fc-h-event .fc-start-resizer,
+.fc-rtl .fc-h-event .fc-start-resizer:before,
+.fc-rtl .fc-h-event .fc-start-resizer:after {
+   left: auto;
+   cursor: e-resize;
+   background: none;
+}
+
+.colorCovid :before {
+   background-color: #9f4aff;
+   border-right: 1px solid rgba(255, 255, 255, 0.6);
+   display: block;
+   content: " ";
+   position: absolute;
+   height: 100%;
+   width: 8px;
+   border-radius: 3px 0 0 3px;
+   top: 0;
+   left: -1px;
+}
+
+.colorLab :before {
+   background-color: #ff4747;
+   border-right: 1px solid rgba(255, 255, 255, 0.6);
+   display: block;
+   content: " ";
+   position: absolute;
+   height: 100%;
+   width: 8px;
+   border-radius: 3px 0 0 3px;
+   top: 0;
+   left: -1px;
+}
+
+.colorVaccination :before {
+   background-color: #ffc400;
+   border-right: 1px solid rgba(255, 255, 255, 0.6);
+   display: block;
+   content: " ";
+   position: absolute;
+   height: 100%;
+   width: 8px;
+   border-radius: 3px 0 0 3px;
+   top: 0;
+   left: -1px;
+}
+
+.colorNurse :before {
+   background-color: #fe56f2;
+   border-right: 1px solid rgba(255, 255, 255, 0.6);
+   display: block;
+   content: " ";
+   position: absolute;
+   height: 100%;
+   width: 8px;
+   border-radius: 3px 0 0 3px;
+   top: 0;
+   left: -1px;
+}
+
+.colorDoctor :before {
+   background-color: #0de882;
+   border-right: 1px solid rgba(255, 255, 255, 0.6);
+   display: block;
+   content: " ";
+   position: absolute;
+   height: 100%;
+   width: 8px;
+   border-radius: 3px 0 0 3px;
+   top: 0;
+   left: -1px;
+}
+
+.colorPhysio :before {
+   background-color: #26cbff;
+   border-right: 1px solid rgba(255, 255, 255, 0.6);
+   display: block;
+   content: " ";
+   position: absolute;
+   height: 100%;
+   width: 8px;
+   border-radius: 3px 0 0 3px;
+   top: 0;
+   left: -1px;
+}
+
+select.filter {
+   width: 500px !important;
+}
+
+.popover {
+   background: #fff !important;
+   color: #2e2f34;
+   border: none;
+   margin-bottom: 10px;
+}
+
+/*popover header*/
+.popover-title {
+   background: #f7f7fc;
+   font-weight: 600;
+   padding: 15px 15px 11px;
+   border: none;
+}
+
+/*popover arrows*/
+.popover.top .arrow:after {
+   border-top-color: #fff;
+}
+
+.popover.right .arrow:after {
+   border-right-color: #fff;
+}
+
+.popover.bottom .arrow:after {
+   border-bottom-color: #fff;
+}
+
+.popover.left .arrow:after {
+   border-left-color: #fff;
+}
+
+.popover.bottom .arrow:after {
+   border-bottom-color: #fff;
+}
+
+.material-icons {
+   font-family: "Material Icons";
+   font-weight: normal;
+   font-style: normal;
+   font-size: 24px;
+   /* Preferred icon size */
+   display: inline-block;
+   line-height: 1;
+   text-transform: none;
+   letter-spacing: normal;
+   word-wrap: normal;
+   white-space: nowrap;
+   direction: ltr;
+
+   /* Support for all WebKit browsers. */
+   -webkit-font-smoothing: antialiased;
+   /* Support for Safari and Chrome. */
+   text-rendering: optimizeLegibility;
+
+   /* Support for Firefox. */
+   -moz-osx-font-smoothing: grayscale;
+
+   /* Support for IE. */
+   font-feature-settings: "liga";
+}
+
+.fc-icon-print::before {
+   font-family: "Material Icons";
+   content: "\e8ad";
+   font-size: 24px;
+}
+
+.fc-printButton-button {
+   padding: 0 3px !important;
+}
+
+@media print {
+   .print-visible {
+      display: inherit !important;
+   }
+
+   .hidden-print {
+      display: none !important;
+   }
+}
+.select2-search__field {
+   width: 100% !important;
+   margin-right: 20px;
+}
+.select2-container--default .select2-selection--multiple {
+   width: 400px;
+}
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+   border: solid 0.8px #dea4c8 !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+   color: #97005e !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+   background-color: #f7deed !important;
+   border: solid 0.8px #dea4c8 !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+   color: #97005e !important;
+}
+.select2-container--default .select2-results__option[aria-selected="true"] {
+   background-color: #fff !important;
+   color: #97005e !important;
+}
+.select2-results__option[aria-selected] {
+   cursor: pointer;
+   color: #97005e !important;
+}
+.select2-dropdown {
+   width: 400px !important;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+   background-color: #97005e !important;
+   color: white !important;
+}
+.select2-container--default .select2-selection--multiple {
+   border: solid 0.8px #dea4c8 !important;
+}
+.select2-container .select2-selection--multiple {
+   min-height: 36px !important;
+}
+.select2-container .select2-search--inline .select2-search__field {
+   margin-top: 8px !important;
+}
+#getEventsCalendar {
+   border-radius: 5px;
+   border: solid 0.8px #dea4c8;
+   padding: 24px 32px;
+   .panel-default {
+      border: none;
+   }
+   .panel-body {
+      padding: 15px 0 40px !important;
+   }
+   .fc-button {
+      outline: none;
+      border: solid 0.8px transparent;
+      text-transform: capitalize;
+      color: #97005e;
+      background-color: #f7deed;
+      height: 36px;
+      box-shadow: none;
+      font-family: "Poppins-Regular";
+      font-size: 10px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 2.5;
+      letter-spacing: normal;
+      text-align: left;
+      color: #000000;
+   }
+   .fc-state-default {
+      background-color: #f7deed;
+      background-image: none !important;
+   }
+   .fc-state-active,
+   .fc-state-disabled,
+   .fc-state-down,
+   .fc-state-hover {
+      border-radius: 4px;
+      border: solid 0.8px #dea4c8;
+      color: #ffffff;
+      background-color: #97005e !important;
+   }
+   .fc-next-button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+   }
+   .fc-button-group {
+      margin-left: 4px;
+   }
+   .fc-prev-button {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+   }
+   .fc-today-button {
+      margin-left: 15px;
+   }
+   .calendarRightOpts {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 36px;
+      .d-addNewBtn {
+         width: 80px;
+         height: 36px;
+         border-radius: 4px;
+         background-color: #97005e;
+         font-family: "Poppins-Regular";
+         font-size: 10px;
+         font-weight: normal;
+         font-stretch: normal;
+         font-style: normal;
+         line-height: 36px;
+         letter-spacing: normal;
+         text-align: center;
+         color: #fff;
+         border: 1px solid;
+      }
+   }
+   .fc-right .fc-button-group {
+      margin-left: 4px;
+      padding: 4px;
+      background-color: #f7deed;
+      border-radius: 4px;
+   }
+
+   input[type="checkbox"] {
+      width: 14px !important;
+      height: 14px !important;
+      // margin: 5px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -o-appearance: none;
+      appearance: none;
+      outline: none;
+      border: 1px solid #97005e;
+      box-shadow: none;
+      font-size: 0.8em;
+      text-align: center;
+      line-height: 1em;
+   }
+
+   input[type="checkbox"]:checked:after {
+      width: 100% !important;
+      height: 100% !important;
+      // background: #97005e;
+      content: "✔";
+      padding: 0 !important;
+      color: #97005e;
+   }
+   .fc-day-header {
+      font-family: "Poppins-Light";
+      font-size: 12px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: center;
+      color: #333;
+   }
+   .fc-today a {
+      color: #97005e;
+      font-family: "Poppins-Regular" !important;
+      font-size: 12px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: center;
+      color: #970a5e !important;
+   }
+   .fc-day-number {
+      color: #97005e;
+   }
+   .fc-center h2 {
+      font-family: "Poppins-SemiBold";
+      font-size: 20px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: center;
+      color: #000;
+   }
+}
+

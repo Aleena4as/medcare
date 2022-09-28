@@ -1,0 +1,97 @@
+.reportRange {
+   font-family: "Poppins-Medium";
+   background: #fff;
+   cursor: pointer;
+   padding: 10px 20px 8px;
+   border: solid 0.8px #dea4c8;
+   border-radius: 5px;
+}
+.daterangepicker .ranges li {
+   font-size: 12px !important;
+   padding: 7px 12px !important;
+   cursor: pointer;
+   width: 131px;
+   height: 26px;
+   border-radius: 4px;
+   background-color: #f7deed;
+   margin: 6px auto;
+   font-family: "Poppins-Medium";
+   text-align: center;
+   font-weight: normal;
+   &.active {
+      background-color: #97005e !important;
+      color: #fff !important;
+   }
+}
+.daterangepicker td.in-range {
+   background-color: #f7deed !important;
+}
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+   background-color: #97005e !important;
+}
+@media (min-width: 564px) {
+   .daterangepicker .drp-calendar.right {
+      margin-left: 0;
+      border-right: 1px solid #ddd;
+   }
+}
+@media (min-width: 730px) {
+   .daterangepicker .ranges {
+      float: right !important;
+   }
+}
+.daterangepicker.show-ranges.ltr .drp-calendar.left {
+   border-left: none !important;
+}
+.daterangepicker .drp-buttons .btn {
+   margin-left: 8px;
+   font-size: 12px;
+   padding: 8px 8px !important;
+   font-family: "Poppins-SemiBold";
+   text-align: center;
+   font-weight: normal !important;
+   border: none;
+   outline: none;
+}
+.daterangepicker .drp-buttons .cancelBtn {
+   background-color: #f7deed;
+}
+.daterangepicker .drp-buttons .applyBtn {
+   background-color: #97005e;
+}
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+   color: #fff;
+   background-color: #97005e !important;
+   border-color: #97005e !important;
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+   box-shadow: 0 0 0 0 white !important;
+}
+.daterangepicker .calendar-table th {
+   color: #97005e !important;
+   font-family: "Poppins-SemiBold";
+}
+.daterangepicker .drp-selected {
+   color: #97005e !important;
+   font-family: "Poppins-SemiBold";
+   font-size: 12px;
+}
+@media (min-width: 564px) {
+   .daterangepicker {
+      margin-right: 44px;
+   }
+}
+@media (min-width: 564px) {
+   .daterangepicker .drp-calendar.left .calendar-table {
+      padding-right: 20px;
+   }
+}
+.fa-calendar:before {
+   content: "\f073";
+   color: #97005e;
+}

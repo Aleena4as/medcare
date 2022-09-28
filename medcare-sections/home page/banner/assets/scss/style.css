@@ -1,0 +1,227 @@
+/* Font Color  */
+/* Box Shadow */
+/* Scroll */
+/* Media Query for Max-width */
+/* Media Query for Min-width */
+/* Media Query for Min & Max Width */
+/* Media Query for Max Height */
+/* Media Query for Min Height */
+/*======= Flex Functions and Prefix Start */
+/* Flex - Justify , Align */
+/*  Flex Justify */
+/*  Flex - Align */
+/* Flex Direction */
+/*======= Flex Functions and Prefix End */
+/*======= Position Property Start */
+/* Position Absolute Center */
+/* Position Zero */
+/*======= Position Property End */
+/*  Custom Overlay */
+/*  Transition */
+/*  ::before */
+/* Main Text */
+a,
+button {
+  cursor: pointer;
+}
+
+.bannerSection {
+  background-image: url(.././images/banners/banner-background.png);
+  width: auto;
+  height: 450px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bannerSection .carousel-item {
+  height: 450px;
+}
+
+.bannerSection .carousel-item .middleImg {
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bannerSection .carousel-item .carouselcontent {
+  position: absolute;
+  width: 90vw;
+  bottom: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.bannerSection .carousel-item .carouselcontent .contentPara p {
+  text-align: left;
+  font: normal normal normal 32px/36px Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  font-family: Poppins-Medium;
+}
+
+.bannerSection .carousel-item .carouselcontent .contentPara h2 {
+  text-align: center;
+  font: normal normal normal 24px/36px Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  font-family: Poppins-Regular;
+}
+
+.bannerSection .carousel-item .carouselcontent .contentBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.bannerSection .carousel-item .carouselcontent .contentBtn button {
+  cursor: pointer;
+  width: 128px;
+  height: 128px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  opacity: 1;
+  border-radius: 50%;
+  white-space: break-spaces;
+  text-align: center;
+  font: normal normal 600 16px/18px Poppins;
+  letter-spacing: 0px;
+  color: #97005e;
+  text-transform: uppercase;
+  opacity: 1;
+  font-family: Poppins-SemiBold;
+}
+
+.bannerSection .carousel-indicators {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  right: -180px;
+}
+
+.bannerSection .carousel-indicators li {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.bannerSection .carousel-indicators .active {
+  background: #97005e;
+  border-radius: 4px !important;
+  width: 30px;
+}
+
+.bannerSectionMobile {
+  background-image: url(.././images/banners/banner-background.png);
+  width: auto;
+  min-height: 352px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bannerSectionMobile .carousel-inner .carouselcontentMob {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 352px;
+}
+
+.bannerSectionMobile .carousel-inner .carouselcontentMob .mobBannerImg {
+  width: 293px;
+  height: 218px;
+  position: relative;
+  top: 80px;
+  z-index: 0;
+}
+
+.bannerSectionMobile .carousel-inner .carouselcontentMob .mobBannerImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.bannerSectionMobile .carousel-inner .carouselcontentMob .mobBannerContent {
+  width: -webkit-fill-available;
+  height: 221px;
+  background-image: url(.././images/banners/content-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-backdrop-filter: blur(1.2px);
+          backdrop-filter: blur(1.2px);
+}
+
+.bannerSectionMobile .carousel-inner .carouselcontentMob .mobBannerContent .contentPara p {
+  text-align: center;
+  font: normal normal normal 24px/35px Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  font-family: Poppins-Regular;
+  margin-bottom: 0;
+}
+
+.bannerSectionMobile .carousel-inner .carouselcontentMob .mobBannerContent .contentPara h2 {
+  text-align: center;
+  font: normal normal normal 24px/36px Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  font-family: Poppins-Regular;
+}
+
+.bannerSectionMobile .carousel-inner .carouselcontentMob .mobBannerContent .contentBtn {
+  margin: 26px auto 0;
+}
+
+.bannerSectionMobile .carousel-inner .carouselcontentMob .mobBannerContent .contentBtn button {
+  background: #97005e 0% 0% no-repeat padding-box;
+  border-radius: 22px;
+  opacity: 1;
+  text-align: center;
+  font: normal normal 600 14px Poppins;
+  letter-spacing: 2.1px;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 1;
+  font-family: Poppins-SemiBold;
+  padding: 15px 20px;
+}
+/*# sourceMappingURL=style.css.map */

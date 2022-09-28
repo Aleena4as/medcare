@@ -1,0 +1,162 @@
+.nw_breadcrumb_title {
+   margin-top: 35px;
+   margin-bottom: 35px;
+   h4 {
+      text-align: left;
+      font: normal normal bold 16px/25px Poppins-Bold;
+      letter-spacing: 0px;
+      color: #892b5e;
+      margin: 0;
+   }
+}
+.requestBtn-wrap {
+   margin: 50px 0;
+   max-width: 60%;
+   display: flex;
+   align-items: center;
+   justify-content: right;
+   @media (max-width: 767px) {
+      max-width: 100%;
+      justify-content: center;
+   }
+   .request-btn {
+      text-decoration: none;
+      color: #fff;
+      font-family: Poppins-Regular;
+      font-size: 12px;
+      text-align: center;
+      border-radius: 100px;
+      background-color: #97005e;
+      margin-top: auto;
+      height: 34px;
+      min-width: 211px;
+      display: -moz-box;
+      display: flex;
+      -moz-box-align: center;
+      align-items: center;
+      -moz-box-pack: center;
+      justify-content: center;
+      cursor: pointer;
+
+      text-align: right;
+   }
+}
+.linkToAesthetics {
+   height: 346px;
+   width: 100%;
+   background-color: #000000;
+   border-radius: 12px;
+   display: flex;
+   align-items: center;
+   margin-bottom: 55px;
+   @media (max-width: 768px) {
+      height: 136px;
+      border-radius: 0;
+   }
+   .linkContentsWrap {
+      padding-left: 80px;
+      @media (max-width: 768px) {
+         padding-left: 20px;
+      }
+      h4 {
+         font: normal normal 100 54px/60px Poppins-Thin;
+         letter-spacing: 0px;
+         color: #ffffff;
+         margin-bottom: 30px;
+         max-width: 622px;
+         @media (max-width: 768px) {
+            font: normal normal 100 22px/27px Poppins-Thin;
+            max-width: 246px;
+            margin-bottom: 8px;
+         }
+      }
+      .linkContents {
+         display: flex;
+         align-items: center;
+         p {
+            font: normal normal 500 16px/77px Poppins-Medium;
+            letter-spacing: 0.8px;
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-right: 18px;
+            margin-bottom: 0;
+            @media (max-width: 768px) {
+               font: normal normal 500 10px/32px Poppins-Medium;
+               letter-spacing: 0.5px;
+               color: #ffffff;
+            }
+         }
+         a {
+            img {
+               @media (max-width: 768px) {
+                  width: 18px;
+                  height: 18px;
+               }
+            }
+         }
+      }
+   }
+   .linkImg {
+      height: 100%;
+      img {
+         height: 100%;
+      }
+   }
+}
+.new-Main-Title {
+   font: normal normal 600 16px/26px Poppins-SemiBold;
+   letter-spacing: 0px;
+   color: #892b5e;
+   margin-bottom: 27px;
+   @media (max-width: 767px) {
+      font: normal normal 600 14px/23px Poppins-SemiBold;
+   }
+}
+.nw-package-inputWrap {
+   display: flex;
+   gap: 40px;
+   margin-bottom: 62px;
+   @media (max-width: 767px) {
+      justify-content: space-between;
+      margin-bottom: 30px;
+   }
+   .nw-package-inputs {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      label {
+         font: normal normal 500 12px/19px Poppins-Medium;
+         letter-spacing: 0px;
+         color: #000000;
+         margin-bottom: 0;
+      }
+      select {
+         border: 0.25px solid #892b5e;
+         border-radius: 17px;
+         padding: 4px 24px;
+         height: 34px;
+         background: url(.././images/icons/arrowDown.svg) no-repeat calc(100% - 10px) center;
+         background-size: 12px;
+         -webkit-appearance: none;
+         -moz-appearance: none;
+         width: 138px;
+
+         font: normal normal normal 16px/26px Poppins-Regular;
+         letter-spacing: 0px;
+         color: #000000;
+         @media (max-width: 767px) {
+            width: auto;
+            font: normal normal normal 14px/23px Poppins-Regular;
+            min-width: 130px;
+         }
+         option {
+            font: normal normal normal 16px/26px Poppins-Regular;
+            letter-spacing: 0px;
+            color: #000000;
+            @media (max-width: 767px) {
+               font: normal normal normal 14px/23px Poppins-Regular;
+            }
+         }
+      }
+   }
+}

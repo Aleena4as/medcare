@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
+   <title>Book Appointment</title>
+   <link href="./assets/Bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+   <link rel="stylesheet" href="./assets/fonts/poppins/stylesheet.css">
+
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-date-range-picker/0.14.2/daterangepicker.min.css">
+   <link rel="stylesheet" href="./assets/css/daterange.css">
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+   <link rel="stylesheet" href="./assets/css/datepickerUI.css">
+   <link href="./assets/scss/style.css" rel="stylesheet" type="text/css" />
+
+   <!-- for country codee with validation begins-->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/css/intlTelInput.css" rel="stylesheet"
+      media="screen">
+   <link rel="stylesheet" href="./assets/css/countrycodeValidation.css">
+   <!-- for country codee with validation ends-->
+
+   <!-- for loaction map icons-->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+
+<body>
+   <div class="container">
+      <div class="hs-bookApp-container">
+         <div class="hs-wrap-booking">
+            <div class="getOptionsforBooking">
+               <div class="row">
+                  <div class="col-12">
+                     <div class="section-subtitle">
+                        <p>Please proceed with your details below to place a request for:</p>
+                     </div>
+                     <div class="hs-bookoptions">
+                        <div class="rdio rdio-primary">
+                           <input class="form-check-input" name="bookingOptions" value="newBooking" id="newBooking"
+                              type="radio" checked>
+                           <label class="form-check-label" for="newBooking">New Booking</label>
+                        </div>
+                        <div class="rdio rdio-primary ">
+                           <input class="form-check-input" name="bookingOptions" value="rescheduling" id="rescheduling"
+                              type="radio">
+                           <label class="form-check-label" for="rescheduling">Rescheduling</label>
+                        </div>
+                        <div class="rdio rdio-primary">
+                           <input class="form-check-input" name="bookingOptions" value="cancellation" id="cancellation"
+                              type="radio">
+                           <label class="form-check-label" for="cancellation">Cancellation</label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <form action="thanks-newBooking.html" method="GET" name="hs-bookApp-form" class="box newBooking-form"
+               id="newBooking-form" autocomplete="off">
+               <div class="formDetails">
+                  <!-- personal Details begins  -->
+                  <section class="hs-personalDetails-wrap">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="section-title">
+                              <p>1. Personal Details</p>
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <div class="hs-select">
+                              <div class="form-group">
+                                 <label>Service</label>
+                                 <select class="form-control" name="p-BookService" id="p-BookService">
+                                    <option value="" selected disabled>Please select a service</option>
+                                    <option value="Covid test @Home">Covid test @Home</option>
+                                    <option value="Lab @Home">Lab @Home</option>
+                                    <option value="Vaccination @Home">Vaccination @Home</option>
+                                    <option value="Nurse @Home">Nurse @Home</option>
+                                    <option value="Doctor @Home">Doctor @Home</option>
+                                    <option value="Physio @Home">Physio @Home</option>
+                                 </select>
+                                 <div class="errorMsg">
+                                    <p id="error1" class="ip-error"></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>First Name</label>
+                              <input type="text" class="form-control" name="p-firstName" id="p-firstName"
+                                 onkeypress="return /[a-z]/i.test(event.key)">
+                              <div class="errorMsg">
+                                 <p id="error2" class="ip-error"></p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Last Name</label>
+                              <input type="text" class="form-control" name="p-lastname" id="p-lastname"
+                                 onkeypress="return /[a-z]/i.test(event.key)">
+                              <div class="errorMsg">
+                                 <p id="error3" class="ip-error"></p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Mobile Number</label>
+                              <input type="text" class="form-control" name="p-mobilenum" id="p-mobilenum" maxlength="15"
+                                 onkeypress="return isNumber(event)" autocomplete="off">
+                              <input type="text" id="p-countryCode" name="p-countryCode" hidden>
+                              <div class="errorMsg">
+                                 <p id="error4" class="ip-error"></p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Emirates Id</label>
+                              <input type="text" class="form-control phone-format" placeholder="000-0000-0000000-0"
+                                 name="p-emiratesId" id="p-emiratesId" onkeypress="return isNumber(event)">
+                              <div class="errorMsg">
+                                 <p id="error5" class="ip-error"></p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group inputIconPlacer">
+                              <label>Date of birth</label>
+                              <input type="text" class="form-control datefixerDoB" name="p-dob" id="p-dob"
+                                 placeholder="dd-mm-yyyy" autocomplete="off">
+                              <div class="errorMsg">
+                                 <p id="error6" class="ip-error"></p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                           <div class="hs-select">
+                              <div class="form-group">
+                                 <label>Gender</label>
+                                 <select class="form-control" name="p-gender" id="p-gender">
+                                    <option value="">Please Select</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                 </select>
+                                 <div class="errorMsg">
+                                    <p id="error7" class="ip-error"></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Email</label>
+                              <input type="email" class="form-control" name="p-email" id="p-email">
+                              <div class="errorMsg">
+                                 <p id="error8" class="ip-error"></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                  </section>
+                  <!-- personal Details ends  -->
+
+                  <!-- add family members begins -->
+                  <section class="hs-addmembers">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="section-title">
+                              <p>2. Add a Family Member </p>
+                              <p class="secondlink skipMember">Skip</p>
+                           </div>
+                        </div>
+
+
+                        <div class="col-12">
+                           <div class="members-panel">
+                              <!-- dynamic member contents to be placed here begins -->
+                              <div class="memberDetails" id="memberContent1">
+                                 <div class="row">
+                                    <div class="col-12">
+                                       <div class="section-title">
+                                          <p class="memberCount">Member 1</p>
+                                          <p id="deleteMember1" class="secondlink famDelete"
+                                             onclick="removeMember(this.id);">Remove</p>
+                                       </div>
+                                    </div>
+                                    <!-- <div class="col-12">
+                                                 <div class="hs-select">
+                                                     <div class="form-group">
+                                                         <label>Service</label>
+                                                         <select class="form-control famService"
+                                                             name="m-bookService1" id="m-bookService1"
+                                                             onchange="memberService(this.id);">
+                                                             <option value="" selected disabled>Please select a
+                                                                 service
+                                                             </option>
+                                                             <option value="Covid test @Home">Covid test @Home
+                                                             </option>
+                                                             <option value="Lab @Home">Lab @Home</option>
+                                                             <option value="Vaccination @Home">Vaccination @Home
+                                                             </option>
+                                                             <option value="Nurse @Home">Nurse @Home</option>
+                                                             <option value="Doctor @Home">Doctor @Home</option>
+                                                             <option value="Physio @Home">Physio @Home</option>
+                                                         </select>
+                                                     </div>
+                                                 </div>
+                                             </div> -->
+                                    <div class="col-12 col-md-6">
+                                       <div class="form-group">
+                                          <label>First Name</label>
+                                          <input type="text" class="form-control famFirstName" name="m-firstname1"
+                                             id="m-firstname1" onchange="memberFirstName(this.id);">
+                                          <div class="errorMsg">
+                                             <p class="ip-error"></p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                       <div class="form-group">
+                                          <label>Last Name</label>
+                                          <input type="text" class="form-control famLastName" name="m-lastname1"
+                                             id="m-lastname1" onchange="memberLastName(this.id);">
+                                          <div class="errorMsg">
+                                             <p class="ip-error"></p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                       <div class="form-group inputIconPlacer">
+                                          <label>Date of birth</label>
+                                          <input type="text" class="form-control datefixerDoB famDob"
+                                             placeholder="dd-mm-yyyy" name="m-dob1" id="m-dob1"
+                                             onchange="memberDob(this.id);" autocomplete="off">
+                                          <div class="errorMsg">
+                                             <p class="ip-error"></p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-12 col-md-3">
+                                       <div class="hs-select">
+                                          <div class="form-group">
+                                             <label>Gender</label>
+                                             <select class="form-control famGender" name="m-gender1" id="m-gender1"
+                                                onchange="memberGender(this.id);">
+                                                <option value="">Please Select</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                             </select>
+                                             <div class="errorMsg">
+                                                <p class="ip-error"></p>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- dynamic member contents to be placed here ends -->
+
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <div class="btn-wrap">
+                              <div class="hs-proceedbtn hs-addMember">
+                                 <button type="button" class="btn addmember-btn">Add a family member &emsp;
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="membersExceededError errorMsg">
+                              <!-- error message when add members exceeds the limit -->
+                           </div>
+                           <div class="errorMsg">
+                              <p id="error14" class="ip-error"></p>
+                           </div>
+                        </div>
+                     </div>
+                  </section>
+                  <!-- add family members ends -->
+
+                  <!-- OTP details begins -->
+                  <section class="hs-OTPDetails">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="section-title">
+                              <p>3. Verification</p>
+                           </div>
+                           <label>PLEASE VERIFY THE 4-digit OTP</label>
+                        </div>
+
+                        <div class="col-12">
+                           <div class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+                              <div class="form-group">
+                                 <input type="text" class="otp-input" id="digit-1" name="digit-1" data-next="digit-2"
+                                    autocomplete="off" />
+                                 <input type="text" class="otp-input" id="digit-2" name="digit-2" data-next="digit-3"
+                                    data-previous="digit-1" autocomplete="off" />
+                                 <input type="text" class="otp-input" id="digit-3" name="digit-3" data-next="digit-4"
+                                    data-previous="digit-2" autocomplete="off" />
+                                 <input type="text" class="otp-input" id="digit-4" name="digit-4" data-next="digit-5"
+                                    data-previous="digit-3" autocomplete="off" />
+                              </div>
+                              <label onclick="resendOTP();" id="resend-OTP" class="resend-OTP"> Re-send
+                                 OTP</label>
+                              <div class="errorMsg">
+                                 <p id="error15" class="ip-error"></p>
+                              </div>
+                              <div class="successMsg">
+                                 <p id="success15" class="ip-success"></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                  </section>
+                  <!-- OTP details ends -->
+
+
+                  <!-- location Details begins  -->
+                  <section class="hs-locationDetails">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="section-title">
+                              <p>4. Confirm Location</p>
+                           </div>
+                           <div class="section-subtitle">
+                              <p>Please proceed with your details below to place a request for:</p>
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <div class="form-group inputIconPlacer userlocation">
+                              <label>Address</label>
+                              <input type="text" class="form-control" value="" name="p-location" id="p-location"
+                                 placeholder="location here">
+                              <span class="input-group-btn">
+                                 <button class="btn " id="geolocateButton" type="button" data-toggle="tooltip"
+                                    data-placement="top">
+                                    <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                 </button>
+                              </span>
+                              <input type="text" class="form-control" id="latText" name="lat" readonly data-geo="lat"
+                                 hidden>
+                              <input type="text" class="form-control" id="lngText" name="lng" readonly data-geo="lng"
+                                 hidden>
+                              <input type="number" class="form-control" id="zoomText" name="zoom" min="1" max="23"
+                                 step="1" value="11" data-geo="zoom" hidden>
+                              <div class="errorMsg">
+                                 <p id="error9" class="ip-error"></p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <!-- <div class="locationMap">
+                                     <iframe id="p-mapCanvas"
+                                         src=""
+                                         width="100%" height="100%" style="border:0;" allowfullscreen=""
+                                         loading="lazy"></iframe>
+                                 </div> -->
+                           <div id="map-container">
+                              <div id="map-container-inner">
+                                 <div id="map"></div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="col-12">
+                           <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Address line 1" name="p-villaNo"
+                                 id="p-villaNo">
+                              <div class="errorMsg">
+                                 <p id="error10" class="ip-error"></p>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Address line 2" name="p-buildingNo"
+                                 id="p-buildingNo">
+                              <div class="errorMsg">
+                                 <p id="error11" class="ip-error"></p>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Area/Street Name" name="p-streetNo"
+                                 id="p-streetNo">
+                              <div class="errorMsg">
+                                 <p id="error12" class="ip-error"></p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <div class="hs-select">
+                              <div class="form-group">
+                                 <select class="form-control" name="p-SelectEmirate" id="p-SelectEmirate">
+                                    <option value="" selected disabled>Select Emirate</option>
+                                    <option value="Dubai">Dubai</option>
+                                    <option value="Sharjah">Sharjah</option>
+                                    <option value="Abu Dhabi">Abu Dhabi</option>
+                                    <option value="Ras Al Khaimah">Ras Al Khaimah</option>
+                                    <option value="Fujairah">Fujairah</option>
+                                    <option value="Ajman">Ajman</option>
+                                    <option value="Um Al Qwain">Um Al Qwain</option>
+                                 </select>
+                                 <div class="errorMsg">
+                                    <p id="error13" class="ip-error"></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                  </section>
+                  <!-- location Details begins  -->
+                  <!-- booking Details begins -->
+                  <section class="hs-bookingDetails">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="section-title">
+                              <p>5.Booking details</p>
+                           </div>
+                           <div class="section-subtitle">
+                              <p>Please select A time SLOT</p>
+                              <p class="secondlink changeDate">Change Date</p>
+                           </div>
+                        </div>
+
+                        <div class="col-12">
+                           <div class="form-group inputIconPlacer ">
+                              <input type="text" name="appointmentDate" id="appointmentDate"
+                                 class="form-control datefixer" placeholder="dd/mm/yyyy">
+                              <div class="errorMsg" autocomplete="off">
+                                 <p id="error16" class="ip-error"></p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <label>AVAILABLE TIME</label>
+                           <div class="btn btn-group-toggle timeslot-wrap px-0" data-toggle="buttons">
+                              <span class="btn  timeSlotBtn active">
+                                 <input type="radio" name="timeslotselected" value="9 - 10 AM" autocomplete="off"
+                                    checked> 9am
+                                 -10am
+                              </span>
+                              <span class="btn  timeSlotBtn">
+                                 <input type="radio" name="timeslotselected" value="10 - 11 AM" autocomplete="off"> 10am
+                                 -11am
+                              </span>
+                              <span class="btn  timeSlotBtn">
+                                 <input type="radio" name="timeslotselected" value="11 - 12 AM" autocomplete="off"> 11am
+                                 -12am
+                              </span>
+                              <span class="btn  timeSlotBtn">
+                                 <input type="radio" name="timeslotselected" value="12 - 1 PM" autocomplete="off"> 12pm
+                                 -1pm
+                              </span>
+                              <span class="btn  timeSlotBtn">
+                                 <input type="radio" name="timeslotselected" value="1 -2 PM" autocomplete="off">
+                                 1pm -2pm
+                              </span>
+                              <span class="btn  timeSlotBtn">
+                                 <input type="radio" name="timeslotselected" value="2 - 3 PM" autocomplete="off">
+                                 2pm -3pm
+                              </span>
+                              <span class="btn  timeSlotBtn">
+                                 <input type="radio" name="timeslotselected" value="3 - 4 PM" autocomplete="off">
+                                 3pm -4pm
+                              </span>
+                              <span class="btn  timeSlotBtn">
+                                 <input type="radio" name="timeslotselected" value="4 - 5 PM" autocomplete="off">
+                                 4pm -5pm
+                              </span>
+                              <span class="btn  timeSlotBtn">
+                                 <input type="radio" name="timeslotselected" value="9 - 10 PM" autocomplete="off"> 9pm
+                                 -10pm
+                              </span>
+                           </div>
+                           <div class="errorMsg">
+                              <p id="error17" class="ip-error"></p>
+                           </div>
+                        </div>
+                     </div>
+
+                  </section>
+                  <!-- booking Details ends -->
+                  <!-- confirmation and payment begins-->
+                  <section class="hs-paymentDetails">
+
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="section-title">
+                              <p>6. Confirmation & Payment</p>
+                           </div>
+                           <div class="section-subtitle">
+                              <p>Please confirm your details before proceeding for payment</p>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Name</label>
+                              <input type="text" class="form-control" name="p-confirm-name" id="p-confirm-name"
+                                 readonly>
+                           </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Mobile</label>
+                              <input type="text" class="form-control" name="p-confirm-mobile" id="p-confirm-mobile"
+                                 readonly>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Email</label>
+                              <input type="email" class="form-control" name="p-confirm-email" id="p-confirm-email"
+                                 readonly>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Date and time</label>
+                              <input type="text" class="form-control" name="p-confirm-timeSlot" id="p-confirm-timeSlot"
+                                 readonly>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Service</label>
+                              <input type="text" class="form-control" name="p-confirm-service" id="p-confirm-service"
+                                 readonly>
+                           </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Address</label>
+                              <textarea class="form-control" name="p-confirm-address" id="p-confirm-address" rows="3"
+                                 readonly></textarea>
+                           </div>
+                        </div>
+                        <div class="col-12 ">
+                           <div class="memberAccordion">
+                              <div class="form-group">
+                                 <label>Family Members</label>
+                              </div>
+
+                              <div class="familyPreviewError errorMsg">
+                                 <!-- get a message that no member preview as no members are added -->
+                              </div>
+                              <div id="accordionPanel" class="accordion accordionPanel">
+                                 <div class="card-member mb-0 previewMemberPanel">
+
+                                    <!-- first child preview begins here -->
+
+
+                                    <div class="previewDetails" id="previewContents1">
+                                       <div class="card-header-member collapsed" data-toggle="collapse"
+                                          href="#famMember1">
+                                          <a class="card-title-member">
+                                             Member 1
+                                          </a>
+                                       </div>
+                                       <div id="famMember1" class="card-body-member collapse" data-parent="#accordion">
+                                          <div class="row">
+                                             <div class="col-12 col-md-6">
+                                                <div class="form-group">
+                                                   <label>First Name</label>
+                                                   <input type="text" class="form-control c-Fname"
+                                                      name="m-confirm-FirstName1" id="m-confirm-FirstName1" readonly>
+                                                </div>
+                                             </div>
+                                             <div class="col-12 col-md-6">
+                                                <div class="form-group">
+                                                   <label>Last Name</label>
+                                                   <input type="text" class="form-control c-Lname"
+                                                      name="m-confirm-LastName1" id="m-confirm-LastName1" readonly>
+                                                </div>
+                                             </div>
+                                             <div class="col-12 col-md-6">
+                                                <div class="form-group">
+                                                   <label>Date of Birth</label>
+                                                   <input type="text" class="form-control c-Dob" name="m-confirm-dob1"
+                                                      id="m-confirm-dob1" readonly>
+                                                </div>
+                                             </div>
+                                             <div class="col-12 col-md-6">
+                                                <div class="form-group">
+                                                   <label>Gender</label>
+                                                   <input type="text" class="form-control c-Gender"
+                                                      name="m-confirm-gender1" id="m-confirm-gender1" readonly>
+                                                </div>
+                                             </div>
+                                             <!-- <div class="col-12 col-md-12">
+                                                             <div class="form-group">
+                                                                 <label>Service</label>
+                                                                 <input type="text" class="form-control c-Service"
+                                                                     name="m-confirm-service1"
+                                                                     id="m-confirm-service1" readonly>
+                                                             </div>
+                                                         </div> -->
+                                          </div>
+                                       </div>
+                                    </div>
+
+                                    <!-- first child preview ends here -->
+
+
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <div class="form-group">
+                              <label>SERVICE FEE</label>
+
+
+                              <div class="hs-totalCost">
+                                 <p>AED 1000/- (Incl. VAT)</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <div class="hs-bookoptions paymentOption-panel">
+                              <div class="rdio rdio-primary">
+                                 <input class="form-check-input" name="paymentchoice" value="paybycash" id="payCash"
+                                    type="radio" checked>
+                                 <label class="form-check-label" for="payCash">Pay by Cash</label>
+                              </div>
+                              <div class="rdio rdio-primary ">
+                                 <input class="form-check-input" name="paymentchoice" value="paybycard" id="payCard"
+                                    type="radio">
+                                 <label class="form-check-label" for="payCard">Pay by Card</label>
+                              </div>
+
+                           </div>
+                        </div>
+
+                     </div>
+                  </section>
+
+               </div>
+               <div class="row">
+                  <div class="col-12">
+                     <div class="btn-wrap">
+                        <div class="hs-proceedbtn hs-previousbtn">
+                           <button id="prev" class="btn" style="display: none;">Previous</button>
+                        </div>
+                        <div class="hs-proceedbtn">
+                           <button id="next" class="btn">Next</button>
+                           <button id="proceed" type="submit" class="btn" style="display: none;">Proceed</button>
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </form>
+
+            <!-- confirmation and payment ends-->
+            <form action="thanks-reschedule.html" method="GET" class="box rescheduling-form" id="rescheduling-form"
+               name="rescheduling-form" style="display: none;">
+               <div class="rescheduleDetails">
+                  <!-- personal Details for rescheduling begins -->
+                  <section class="hs-OTPresVerification">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="section-title">
+                              <p>1. Personal Details</p>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Mobile Number</label>
+                              <input type="text" class="form-control" name="resotp-mobilenum" id="resotp-mobilenum"
+                                 maxlength="15" onkeypress="return isNumber(event)" autocomplete="off">
+                              <input type="text" id="resotp-countryCode" name="resotp-countryCode" hidden>
+                              <div class="errorMsg">
+                                 <p id="error-res1a" class="res-ip-error"></p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Emirates Id</label>
+                              <input type="text" class="form-control phone-format" placeholder="000-0000-0000000-0"
+                                 name="resotp-emiratesId" id="resotp-emiratesId" onkeypress="return isNumber(event)">
+                              <div class="errorMsg">
+                                 <p id="error-res1b" class="res-ip-error"></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </section>
+                  <!-- personal Details for rescheduling ends -->
+
+                  <!-- OTP details begins -->
+                  <section class="hs-OTPDetails">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="section-title">
+                              <p>2. Verification</p>
+                           </div>
+                           <label>PLEASE VERIFY THE 4-digit OTP</label>
+                        </div>
+
+                        <div class="col-12">
+                           <div class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+                              <div class="form-group">
+                                 <input type="text" class="otp-input" id="resdigit-1" name="resdigit-1"
+                                    data-next="resdigit-2" autocomplete="off" />
+                                 <input type="text" class="otp-input" id="resdigit-2" name="resdigit-2"
+                                    data-next="resdigit-3" data-previous="resdigit-1" autocomplete="off" />
+                                 <input type="text" class="otp-input" id="resdigit-3" name="resdigit-3"
+                                    data-next="resdigit-4" data-previous="resdigit-2" autocomplete="off" />
+                                 <input type="text" class="otp-input" id="resdigit-4" name="resdigit-4"
+                                    data-next="resdigit-5" data-previous="resdigit-3" autocomplete="off" />
+                              </div>
+                              <label onclick="resendOTP();" id="res-resend-OTP" class="resend-OTP"> Re-send
+                                 OTP</label>
+                              <div class="errorMsg">
+                                 <p id="error-res1" class="res-ip-error"></p>
+                              </div>
+                              <div class="successMsg">
+                                 <p id="success-res1" class="res-ip-success"></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </section>
+                  <!-- OTP details ends -->
+                  <!-- personal Details begins  -->
+                  <section class="hs-personalDetails-wrap">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="section-title">
+                              <p>3. Reschedule Apppointment</p>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Name</label>
+                              <input type="text" class="form-control" name="res-name" value="Amith Brindra"
+                                 id="res-name" readonly>
+                           </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Mobile</label>
+                              <input type="text" class="form-control" name="res-mobile" value="+9715233018344"
+                                 id="res-mobile" readonly>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Email</label>
+                              <input type="email" class="form-control" name="res-email" value="amith@gmail.com"
+                                 id="res-email" readonly>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Address</label>
+                              <input type="text" class="form-control" name="res-address"
+                                 value="flat 42, building 50, Rigga" id="res-address" readonly>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Service</label>
+                              <input type="text" class="form-control" name="res-service" value="Lab@Home"
+                                 id="res-service" readonly>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group inputIconPlacer ">
+                              <label>Appointment Date</label>
+                              <input type="text" name="res-appointmentDate" id="res-appointmentDate"
+                                 class="form-control datefixer" placeholder="dd/mm/yyyy" autocomplete="off">
+                              <div class="errorMsg">
+                                 <p id="error-res2" class="res-ip-error"></p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <label>AVAILABLE TIME</label>
+                           <div class="btn btn-group-toggle timeslot-wrap px-0" data-toggle="buttons">
+                              <span class="btn  timeSlotBtn active">
+                                 <input type="radio" name="res-timeslotselected" value="9 - 10 AM" autocomplete="off"
+                                    checked> 9am
+                                 -10am
+                              </span>
+                              <span class="btn  timeSlotBtn">
+                                 <input type="radio" name="res-timeslotselected" value="10 - 11 AM" autocomplete="off">
+                                 10am
+                                 -11am
+                              </span>
+                              <span class="btn  timeSlotBtn">
+                                 <input type="radio" name="res-timeslotselected" value="11 - 12 AM" autocomplete="off">
+                                 11am
+                                 -12am
+                              </span>
+                              <span class="btn  timeSlotBtn">
+                                 <input type="radio" name="res-timeslotselected" value="12 - 1 PM" autocomplete="off">
+                                 12pm
+                                 -1pm
+                              </span>
+                              <span class="btn  timeSlotBtn">
+                                 <input type="radio" name="res-timeslotselected" value="1 -2 PM" autocomplete="off">
+                                 1pm -2pm
+                              </span>
+                              <span class="btn  timeSlotBtn">
+                                 <input type="radio" name="res-timeslotselected" value="2 - 3 PM" autocomplete="off">
+                                 2pm -3pm
+                              </span>
+                              <span class="btn  timeSlotBtn">
+                                 <input type="radio" name="res-timeslotselected" value="3 - 4 PM" autocomplete="off">
+                                 3pm -4pm
+                              </span>
+                              <span class="btn  timeSlotBtn">
+                                 <input type="radio" name="res-timeslotselected" value="4 - 5 PM" autocomplete="off">
+                                 4pm -5pm
+                              </span>
+                              <span class="btn  timeSlotBtn">
+                                 <input type="radio" name="res-timeslotselected" value="9 - 10 PM" autocomplete="off">
+                                 9pm
+                                 -10pm
+                              </span>
+                           </div>
+                           <div class="errorMsg">
+                              <p id="error-res3" class="res-ip-error"></p>
+                           </div>
+                        </div>
+                     </div>
+                  </section>
+                  <!-- personal Details ends  -->
+
+
+               </div>
+               <div class="row">
+                  <div class="col-12">
+                     <div class="btn-wrap">
+                        <div class="hs-proceedbtn hs-previousbtn">
+                           <button id="res-prev" class="btn" style="display: none;">Previous</button>
+                        </div>
+                        <div class="hs-proceedbtn">
+                           <button id="res-next" class="btn">Next</button>
+                           <button id="res-proceed" type="submit" class="btn" style="display: none;">Proceed</button>
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </form>
+
+            <form action="thanks-cancellation.html" method="GET" class="box cancellation-form" name="cancellation-form"
+               id="cancellation-form" style="display: none;">
+               <div class="cancellationDetails">
+                  <!-- personal Details for rescheduling begins -->
+                  <section class="hs-OTPcanVerification">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="section-title">
+                              <p>1. Personal Details</p>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Mobile Number</label>
+                              <input type="text" class="form-control" name="canotp-mobilenum" id="canotp-mobilenum"
+                                 maxlength="15" onkeypress="return isNumber(event)" autocomplete="off">
+                              <input type="text" id="canotp-countryCode" name="canotp-countryCode" hidden>
+                              <div class="errorMsg">
+                                 <p id="error-can1a" class="can-ip-error"></p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Emirates Id</label>
+                              <input type="text" class="form-control phone-format" placeholder="000-0000-0000000-0"
+                                 name="canotp-emiratesId" id="canotp-emiratesId" onkeypress="return isNumber(event)">
+                              <div class="errorMsg">
+                                 <p id="error-can1b" class="can-ip-error"></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </section>
+                  <!-- personal Details for rescheduling ends -->
+                  <!-- OTP details begins -->
+                  <section class="hs-OTPDetails">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="section-title">
+                              <p>2. Verification</p>
+                           </div>
+                           <label>PLEASE VERIFY THE 4-digit OTP</label>
+                        </div>
+
+                        <div class="col-12">
+                           <div class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+                              <div class="form-group">
+                                 <input type="text" class="otp-input" id="candigit-1" name="candigit-1"
+                                    data-next="candigit-2" autocomplete="off" />
+                                 <input type="text" class="otp-input" id="candigit-2" name="candigit-2"
+                                    data-next="candigit-3" data-previous="candigit-1" autocomplete="off" />
+                                 <input type="text" class="otp-input" id="candigit-3" name="candigit-3"
+                                    data-next="candigit-4" data-previous="candigit-2" autocomplete="off" />
+                                 <input type="text" class="otp-input" id="candigit-4" name="candigit-4"
+                                    data-next="candigit-5" data-previous="candigit-3" autocomplete="off" />
+                              </div>
+                              <label onclick="resendOTP();" id="can-resend-OTP" class="resend-OTP"> Re-send
+                                 OTP</label>
+                              <div class="errorMsg">
+                                 <p id="error-can1" class="can-ip-error"></p>
+                              </div>
+                              <div class="successMsg">
+                                 <p id="success-can1" class="ip-success"></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </section>
+                  <!-- OTP details ends -->
+                  <!-- personal Details begins  -->
+                  <section class="hs-personalDetails-wrap">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="section-title">
+                              <p>3. Cancel Apppointment</p>
+                           </div>
+                           <div class="label-box">
+                              <label>Following are your booking details.<br />
+                                 select the service which you would like to cancel.</label>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Name</label>
+                              <input type="text" class="form-control" name="can-name" value="Amith Brindra"
+                                 id="can-name" readonly>
+                           </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                           <div class="form-group">
+                              <label>Mobile</label>
+                              <input type="text" class="form-control" name="can-mobile" value="+9715043018374"
+                                 id="can-mobile" readonly>
+                           </div>
+                        </div>
+
+
+                        <div class="col-12">
+                           <div class="cancelBookingTable">
+                              <table id="cancelApp-Table" style="border-collapse: collapse;">
+                                 <tr>
+                                    <!-- <th style="max-width:20px">&nbsp;</th> -->
+                                    <th style="width:392px" colspan="2"><label>Service</label></th>
+                                    <th style="width:120px"><label>Date & Time</label></th>
+                                 </tr>
+                                 <tr>
+                                    <td><label class="checkWrap">
+                                          <input type="checkbox">
+                                          <span class="checkmark"></span>
+                                       </label></td>
+                                    <td><input type="text" class="serviceToCancel" value="Lab-Testing@Home" readonly>
+                                    </td>
+                                    <td>
+                                       <input type="text" name="can-appointmentDate1" id="can-appointmentDate1"
+                                          class="datetoCancel" value="May 21, 2021, 2 - 3 Pm" readonly>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td><label class="checkWrap">
+                                          <input type="checkbox">
+                                          <span class="checkmark"></span>
+                                       </label></td>
+                                    <td><input type="text" class="serviceToCancel" value="Covid-Testing@Home" readonly>
+                                    </td>
+                                    <td>
+                                       <input type="text" name="can-appointmentDate2" id="can-appointmentDate2"
+                                          class="datetoCancel" value="June 21, 2021, 2 - 3 Pm" readonly>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="errorMsg">
+                              <p id="error-can2" class="can-ip-error"></p>
+                           </div>
+                        </div>
+
+                     </div>
+                  </section>
+                  <!-- personal Details ends  -->
+
+
+               </div>
+               <div class="row">
+                  <div class="col-12">
+                     <div class="btn-wrap">
+                        <div class="hs-proceedbtn hs-previousbtn">
+                           <button id="can-prev" class="btn" style="display: none;">Previous</button>
+                        </div>
+                        <div class="hs-proceedbtn">
+                           <button id="can-next" class="btn">Next</button>
+                           <button id="can-proceed" type="submit" class="btn" style="display: none;">Confirm</button>
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+
+
+   </div>
+
+
+
+
+   <!-- First Jquery -->
+   <script src="./assets/Bootstrap/jquery.min.js"></script>
+
+   <!-- Third Bootstrap -->
+   <script src="./assets/Bootstrap/bootstrap.min.js"></script>
+
+
+   <!-- country code with validation js begins -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"></script>
+   <script src="./assets/js/countrycode-Validation.js"></script>
+   <!-- country code with validation js begins -->
+
+
+   <!-- for OTP validation -->
+   <script src="./assets/js/otp-validation.js"></script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+   <script src="./assets/js/datepickerUI.js"></script>
+   <script src="./assets/js/general.js"></script>
+   <script src="./assets/js/previewForm.js"></script>
+   <script src="./assets/js/addMembers.js"></script>
+   <script src="./assets/js/previewMember.js"></script>
+   <script src="./assets/js/removeMember.js"></script>
+   <script src="./assets/js/paymentValidation.js"></script>
+   <script src="./assets/js/formValidate.js"></script>
+   <script src="./assets/js/multistep-custom.js"></script>
+
+
+   <!-- rescheduling js begins -->
+   <script src="./assets/js/reschedule/res-multistep.js"></script>
+   <script src="./assets/js/reschedule/res-otp-validate.js"></script>
+   <script src="./assets/js/reschedule/res-formValidation.js"></script>
+   <script src="./assets/js/reschedule/res-countryCode.js"></script>
+
+   <!-- cancellation js begins -->
+   <script src="./assets/js/cancellation/can-multistep.js"></script>
+   <script src="./assets/js/cancellation/table-checkbox.js"></script>
+   <script src="./assets/js/cancellation/can-otp-validate.js"></script>
+   <script src="./assets/js/cancellation/can-formValidation.js"></script>
+   <script src="./assets/js/cancellation/can-countryCode.js"></script>
+
+   <!-- location fetching begins-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+   <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSJQtrAKJX7YUxL4jpqBayh9f-LJ4tu2k&libraries=places"></script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.min.js"></script>
+   <script src="./assets/js/locationMap.js"></script>
+   <!-- location fetching ends here -->
+
+</body>
+
+</html>

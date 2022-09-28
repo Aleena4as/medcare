@@ -1,0 +1,715 @@
+* {
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   scroll-behavior: smooth;
+}
+html {
+   overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+span,
+small,
+strong,
+address,
+ul,
+li,
+a,
+label,
+p {
+   text-decoration: none;
+   list-style-type: none;
+}
+
+a:hover,
+button:hover {
+   outline: none;
+   text-decoration: none;
+   border: none;
+   color: unset;
+}
+
+a:focus,
+button:focus {
+   outline: none;
+   text-decoration: none;
+   border: none;
+}
+
+.btn.focus,
+.btn:focus {
+   outline: none;
+   box-shadow: 0 0 0 0 white;
+}
+
+:focus {
+   outline: none;
+   -webkit-box-shadow: none;
+   box-shadow: none;
+}
+
+.form-control:focus {
+   color: #495057;
+   background-color: #fff;
+   border-color: transparent;
+   border-bottom: 1px solid #bfbfbf;
+   outline: 0;
+   box-shadow: 0 0 0 0 white;
+   border-radius: inherit;
+}
+body {
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+   font-family: "Poppins-Regular";
+}
+button {
+   appearance: none;
+   -moz-appearance: none;
+   -webkit-appearance: none;
+}
+input, select{
+   cursor: pointer;
+}
+select{
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   padding: 5px !important;
+}
+
+// to ignore the blue color background on autofill
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+   -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+}
+// to fix placeholder issues
+input {
+   &::-webkit-input-placeholder {
+      text-align: left;
+      font: normal normal normal 16px/24px Poppins;
+      letter-spacing: 0.8px;
+      color: #b2b2b2;
+      opacity: 1;
+      // text-transform: capitalize;
+      font-family: "Poppins-Regular";
+   }
+
+   &:-ms-input-placeholder {
+      @extend ::-webkit-input-placeholder;
+   }
+
+   &::placeholder {
+      @extend ::-webkit-input-placeholder;
+   }
+}
+.form-control:disabled,
+.form-control[readonly] {
+   background-color: transparent;
+   opacity: 1;
+   border: 0;
+   color: #97005e;
+}
+/* Custom checkbox begins here*/
+/* The container */
+.checkWrap {
+   display: block;
+   position: relative;
+   margin-top: -8px;
+   padding-right: 25px;
+   cursor: pointer;
+   font-size: 22px;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkWrap input {
+   position: absolute;
+   opacity: 0;
+   cursor: pointer;
+   height: 0;
+   width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+   position: absolute;
+   top: 0px;
+   left: 0;
+   height: 15px;
+   width: 15px;
+   background-color: transparent;
+   border: 1px solid #97005e;
+}
+
+/* On mouse-over, add a grey background color */
+.checkWrap:hover input ~ .checkmark {
+   background-color: transparent;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkWrap input:checked ~ .checkmark {
+   background-color: #97005e;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+   content: "";
+   position: absolute;
+   display: none;
+}
+
+/* Show the checkmark when checked */
+.checkWrap input:checked ~ .checkmark:after {
+   display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkWrap .checkmark:after {
+   left: 4px;
+   top: 0;
+   width: 5px;
+   height: 10px;
+   border: solid white;
+   border-width: 0 3px 3px 0;
+   -webkit-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   transform: rotate(45deg);
+}
+/* Custom checkbox ends here*/
+
+.hs-bookApp-container {
+   padding: 20px 0;
+   margin-top: 20px;
+   .section-subtitle {
+      display: flex;
+      justify-content: space-between;
+      p {
+         text-align: left;
+         font: normal normal 600 16px/30px Poppins;
+         letter-spacing: 0.9px;
+         color: #97005e;
+         opacity: 1;
+         font-family: "Poppins-SemiBold";
+      }
+      .secondlink {
+         text-decoration: underline;
+         font: normal normal normal 14px/21px Poppins;
+         letter-spacing: 0px;
+         color: #97005e;
+         opacity: 1;
+         font-family: "Poppins-Regular";
+         cursor: pointer;
+      }
+   }
+   .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p {
+         text-align: left;
+         font: normal normal 600 21px/31px Poppins;
+         letter-spacing: 0.42px;
+         color: #97005e;
+         opacity: 1;
+         font-family: "Poppins-SemiBold";
+         margin: 36px 0;
+         text-transform: capitalize;
+      }
+      .secondlink {
+         text-decoration: underline;
+         font: normal normal normal 14px/21px Poppins;
+         letter-spacing: 0px;
+         color: #97005e;
+         opacity: 1;
+         font-family: "Poppins-Regular";
+         cursor: pointer;
+      }
+   }
+   label {
+      text-align: left;
+      font: normal normal 500 14px/21px Poppins;
+      letter-spacing: 0.78px;
+      color: #97005e;
+      text-transform: uppercase;
+      opacity: 1;
+      font-family: "Poppins-Medium";
+   }
+   select {
+      text-align: left;
+      font: normal normal normal 16px/25px Poppins;
+      letter-spacing: 0px;
+      color: #000000;
+      opacity: 1;
+      font-family: "Poppins-Regular";
+      margin-top: 0;
+   }
+
+   select.form-control {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background: url(.././images/arrow-down.svg) no-repeat;
+      background-position-x: calc(100% - 10px);
+      background-position-y: 14px;
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid #97005e;
+      padding-left: 0;
+      height: 30px !important;
+   }
+
+   .form-group {
+      margin-bottom: 30px;
+      // text-align: left;
+   }
+   input {
+      text-align: left;
+      font: normal normal normal 16px/24px Poppins;
+      letter-spacing: 0.9px;
+      color: #000000;
+      opacity: 1;
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid #97005e;
+      font-family: "Poppins-Regular";
+      padding-left: 0;
+      height: 30px;
+   }
+
+   .errorMsg {
+      p {
+         text-align: left;
+         font: normal normal 600 16px/30px Poppins;
+         letter-spacing: 0.9px;
+         color: red;
+         opacity: 1;
+         font-family: "Poppins-Light";
+         margin-top: 4px;
+         // @media (max-width: 767px) {
+         //    text-align: center;
+         // }
+      }
+   }
+
+   .successMsg {
+      p {
+         text-align: left;
+         font: normal normal 600 16px/30px Poppins;
+         letter-spacing: 0.9px;
+         color: green;
+         opacity: 1;
+         font-family: "Poppins-Light";
+         margin-top: 4px;
+         // @media (max-width: 767px) {
+         //    text-align: center;
+         // }
+      }
+   }
+
+   .btn-wrap {
+      display: flex;
+      column-gap: 18px;
+      @media (max-width: 767px) {
+         justify-content: center;
+      }
+      .hs-proceedbtn {
+         margin: 44px 0;
+         button {
+            @media (min-width: 768px) {
+               min-width: 265px;
+            }
+            min-width: 125px;
+            height: 45px;
+            opacity: 1;
+            border-radius: 25px;
+            background-color: #97005e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-family: "Poppins-Regular";
+            font: normal normal normal 14px/24px Poppins;
+            letter-spacing: 0.9px;
+            font-family: "Poppins-Regular";
+            padding: 0 25px;
+            border: none;
+
+            @media (max-width: 767px) {
+               margin: 0 auto;
+            }
+         }
+      }
+      .hs-previousbtn {
+         button {
+            background-color: #feceec;
+            color: #97005e;
+         }
+      }
+      .hs-addMember {
+         margin-top: 8px;
+         margin-bottom: 44px;
+         button.addmember-btn {
+            background-color: transparent;
+            color: #97005e;
+            border: 1px solid #97005e;
+            background: url(.././images/plus.svg) no-repeat;
+            background-position-x: calc(100% - 30px);
+            background-position-y: center;
+            @media (max-width: 767px) {
+               background-position-x: calc(100% - 20px);
+            }
+            &:hover {
+               background: url(.././images/plus-white.svg) no-repeat;
+               background-position-x: calc(100% - 30px);
+               background-position-y: center;
+               background-color: #97005e;
+               color: #ffffff;
+               @media (max-width: 767px) {
+                  background-position-x: calc(100% - 20px);
+               }
+            }
+         }
+      }
+   }
+   .memberDetails {
+      margin-bottom: 25px;
+      margin-top: -30px;
+   }
+
+   .hs-bookoptions {
+      display: flex;
+      column-gap: 40px;
+      margin-top: 22px;
+      flex-direction: column;
+      row-gap: 40px;
+      @media (min-width: 768px) {
+         flex-direction: row;
+      }
+      .form-check-label {
+         text-align: left;
+         font: normal normal normal 16px/30px Poppins;
+         letter-spacing: 0.9px;
+         color: #212529;
+         opacity: 1;
+         font-family: "Poppins-Regular";
+      }
+   }
+   .timeslot-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      column-gap: 8px;
+      @media (min-width: 768px) {
+         column-gap: 15px;
+      }
+      row-gap: 15px;
+   }
+   .timeSlotBtn {
+      flex: 1 1 30%; /*grow | shrink | basis */
+      //  height: 100px;
+   }
+   .dateCalendarbox {
+      position: relative;
+      .dateCalendarImg {
+         position: absolute;
+         top: 0;
+         right: 0;
+      }
+   }
+   .timeslot-wrap {
+      .timeSlotBtn {
+         border: 1px solid #97005e;
+         color: #97005e;
+         background-color: transparent;
+         border-radius: 25px;
+      }
+      .active {
+         background-color: #97005e;
+         color: #ffffff;
+      }
+      input:checked {
+         background-color: #97005e;
+         color: #ffffff;
+      }
+   }
+}
+
+//  radio buton custom begins
+.rdio {
+   position: relative;
+   input[type="radio"] {
+      opacity: 0;
+   }
+   label {
+      padding-left: 40px;
+      cursor: pointer;
+      margin-bottom: 7px !important;
+      &:before {
+         width: 18px;
+         height: 18px;
+         position: absolute;
+         top: 4px;
+         left: 0;
+         content: "";
+         display: inline-block;
+         -moz-border-radius: 50px;
+         -webkit-border-radius: 50px;
+         border-radius: 50px;
+         border: 1px solid #97005e;
+         background: #ffffff;
+      }
+   }
+   input[type="radio"] {
+      margin: 0px;
+      &:disabled + label {
+         color: #999;
+         &:before {
+            background-color: #97005e;
+         }
+      }
+      &:checked + label::after {
+         content: "";
+         position: absolute;
+         top: 9px;
+         left: 5px;
+         display: inline-block;
+         font-size: 11px;
+         width: 8px;
+         height: 8px;
+         background-color: #ffffff;
+         -moz-border-radius: 50px;
+         -webkit-border-radius: 50px;
+         border-radius: 50px;
+      }
+   }
+}
+
+.rdio-default input[type="radio"]:checked + label:before {
+   border-color: #97005e;
+}
+
+.rdio-primary input[type="radio"]:checked + label {
+   &:before {
+      border-color: #97005e;
+      background: #97005e;
+   }
+   &::after {
+      background-color: #ffffff;
+   }
+}
+//  radio buton custom ends
+.otp-input {
+   width: 50px !important;
+   height: 50px !important;
+   background: #ffffff 0% 0% no-repeat padding-box;
+   border: 1px solid #97005e !important;
+   border-radius: 9px !important;
+   opacity: 1;
+   margin-right: 20px;
+   padding: 10px !important;
+   text-align: center !important;
+}
+
+.digit-group {
+   margin: 24px 0;
+}
+.resend-OTP {
+   cursor: pointer;
+}
+.locationMap {
+   width: auto;
+   height: 232px;
+   margin-bottom: 30px;
+}
+.inputIconPlacer {
+   position: relative;
+   input {
+      background: url(.././images/calendar.svg) no-repeat;
+      background-position-x: calc(100% - 10px);
+   }
+   .changeDate {
+      position: absolute;
+      top: 10px;
+      p {
+         text-decoration: underline;
+         font: normal normal normal 12px/18px Poppins;
+         letter-spacing: 0px;
+         color: #97005e;
+         opacity: 1;
+         font-family: "Poppins-Regular";
+      }
+   }
+}
+.userlocation {
+   input {
+      background: url(.././images/location-pin.svg) no-repeat;
+      background-position-x: calc(100% - 10px);
+   }
+}
+
+.hs-paymentDetails {
+   input {
+      border: none;
+      font: normal normal 600 16px/24px Poppins;
+      letter-spacing: 0.9px;
+      color: #97005e;
+      text-transform: capitalize;
+      opacity: 1;
+      font-family: "Poppins-SemiBold";
+   }
+   input[type="email"] {
+      text-transform: lowercase;
+   }
+
+   .hs-totalCost {
+      p {
+         text-align: left;
+         font: normal normal 600 16px/32px Poppins;
+         letter-spacing: 0.9px;
+         color: #97005e;
+         opacity: 1;
+         font-family: "Poppins-SemiBold";
+         @media (min-width: 768px) {
+            font: normal normal normal 21px/21px Poppins;
+            letter-spacing: 1.18px;
+            color: #000000;
+            font-family: "Poppins-Regular";
+         }
+      }
+   }
+   .hs-bookoptions {
+      input[type="radio"] + label {
+         font: normal normal normal 16px/24px Poppins;
+         color: #000000;
+         opacity: 1;
+         font-family: "Poppins-Medium";
+         margin-top: 3px;
+      }
+   }
+}
+
+.thanks-select {
+   margin: 50px 0 30px;
+}
+.ui-datepicker-calendar tbody td a.ui-state-active {
+   background: #9dd84d;
+   color: #ffffff;
+}
+.ui-datepicker-calendar tbody td a:hover {
+   background: #feceec;
+   color: #ffffff;
+}
+.ui-datepicker-calendar tbody td a.ui-state-highlight {
+   color: #ffffff;
+   border: 1px solid #97005e;
+   background: #97005e;
+}
+select {
+   &:invalid {
+      text-align: left;
+      font: normal normal normal 16px/24px Poppins;
+      letter-spacing: 0.8px;
+      color: #687780;
+      opacity: 1;
+      // text-transform: capitalize;
+      font-family: "Poppins-Regular";
+   }
+}
+
+.memberAccordion {
+   .accordionPanel {
+      margin-top: 10px;
+   }
+   .card-title-member {
+      text-align: left;
+      font: normal normal 500 16px/24px Poppins;
+      letter-spacing: 0.9px;
+      color: #000000;
+      text-transform: capitalize;
+      opacity: 1;
+      font-family: "Poppins-Medium";
+   }
+   .accordion .card-header-member {
+      padding: 20px 0;
+      cursor: pointer;
+      &:after {
+         // font-family: "FontAwesome";
+         // content: "\f068";
+         float: right;
+         content: url(.././images/minus.svg);
+      }
+      &.collapsed:after {
+         /* symbol for "collapsed" panels */
+         // content: "\f067";
+         content: url(.././images/plus.svg);
+      }
+   }
+}
+
+.paymentOption-panel {
+   margin: 44px 0 20px !important;
+}
+@media (max-width: 767px) {
+   .hs-paymentDetails {
+      .form-group {
+         display: flex;
+         justify-content: initial;
+         align-items: baseline;
+         label {
+            width: 127px;
+            margin-bottom: 0;
+         }
+      }
+   }
+}
+
+.list-group-item-action.active {
+   background-color: #97005e;
+   border: none;
+   font-weight: bold;
+   color: #fff !important;
+   padding: 15px 9px !important;
+}
+
+// cancellation table css begins here
+.cancelBookingTable {
+   overflow-x: auto;
+   padding: 15px 0 40px;
+   input {
+      border: none;
+   }
+   th {
+      border: 0;
+   }
+   td {
+      border: 0;
+      padding: 10px 0;
+   }
+
+   tr td:first-child {
+      width: 35px;
+   }
+}
+// cancellation table css ends here
+
+.label-box {
+   margin-bottom: 36px;
+}

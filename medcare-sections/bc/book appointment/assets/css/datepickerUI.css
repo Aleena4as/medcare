@@ -1,0 +1,97 @@
+.ui-datepicker {
+   display: none;
+   background-color: #fff;
+   box-shadow: 0 0.125rem 0.3rem rgba(0, 0, 0, 0.2);
+   margin-top: 0.25rem;
+   border-radius: 0.5rem;
+   padding: 0.5rem;
+
+   border: 0.5px solid #a42072;
+   border-radius: 18px;
+   opacity: 1;
+   padding: 25px;
+}
+.ui-datepicker-calendar table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+.ui-datepicker-calendar thead th {
+   padding: 0.25rem 0;
+   text-align: center;
+   font-size: 0.8rem;
+   font-weight: 400;
+   color: #353535;
+}
+.ui-datepicker-calendar tbody td {
+   width: 2.5rem;
+   text-align: center;
+   padding: 0;
+}
+.ui-datepicker-calendar tbody td a {
+   display: block;
+   border-radius: 50%;
+   line-height: 2rem;
+   transition: 0.3s all;
+   color: #353535;
+   font-size: 0.875rem;
+   text-decoration: none;
+   width: 2rem;
+   height: 2rem;
+   line-height: 2rem;
+}
+.ui-datepicker-calendar tbody td a:hover {
+   background: #e17981;
+   color: #ffffff;
+}
+.ui-datepicker-calendar tbody td a.ui-state-active {
+   background: #d33a47;
+   color: #ffffff;
+}
+.ui-datepicker-calendar tbody td a.ui-state-highlight {
+   color: #d33a47;
+   border: 1px solid #d33a47;
+}
+.ui-datepicker-header a span {
+   display: none;
+}
+.ui-datepicker-header a.ui-corner-all {
+   cursor: pointer;
+   position: absolute;
+   top: 0;
+   width: 2rem;
+   height: 2rem;
+   margin: 0.5rem;
+   border-radius: 0.5rem;
+}
+.ui-datepicker-header a.ui-datepicker-prev {
+   left: 0;
+}
+.ui-datepicker-header a.ui-datepicker-prev::after {
+   font-family: "Material Icons";
+   content: "";
+   font-size: 1.5rem;
+   color: #353535;
+}
+.ui-datepicker-header a.ui-datepicker-next {
+   right: 0;
+}
+.ui-datepicker-header a.ui-datepicker-next::after {
+   font-family: "Material Icons";
+   content: "";
+   font-size: 1.5rem;
+   color: #353535;
+}
+.ui-datepicker-title {
+   text-align: center;
+   line-height: 2rem;
+   margin-bottom: 0.25rem;
+   font-size: 0.875rem;
+   font-weight: 500;
+   padding-bottom: 0.25rem;
+   margin-top:-12px
+}
+.ui-datepicker-week-col {
+   color: #353535;
+   font-weight: 400;
+   font-size: 0.75rem;
+}

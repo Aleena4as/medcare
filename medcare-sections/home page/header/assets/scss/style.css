@@ -1,0 +1,53 @@
+/* Font Color  */
+/* Box Shadow */
+/* Scroll */
+/* Media Query for Max-width */
+/* Media Query for Min-width */
+/* Media Query for Min & Max Width */
+/* Media Query for Max Height */
+/* Media Query for Min Height */
+/*======= Flex Functions and Prefix Start */
+/* Flex - Justify , Align */
+/*  Flex Justify */
+/*  Flex - Align */
+/* Flex Direction */
+/*======= Flex Functions and Prefix End */
+/*======= Position Property Start */
+/* Position Absolute Center */
+/* Position Zero */
+/*======= Position Property End */
+/*  Custom Overlay */
+/*  Transition */
+/*  ::before */
+/* Main Text */
+@media (max-width: 767px) {
+  .linksSection {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbarSupportedContent {
+    display: none;
+  }
+  .main2div a {
+    padding: 0;
+    display: inline-block;
+  }
+  .site-en .main1div {
+    float: none;
+  }
+  .linksSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 15%;
+  }
+  .searchIconMenu {
+    display: none;
+  }
+  .searchIconPadding {
+    display: block;
+  }
+}
+/*# sourceMappingURL=style.css.map */

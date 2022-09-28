@@ -1,0 +1,909 @@
+/* Font Color  */
+/* Box Shadow */
+/* Scroll */
+/* Media Query for Max-width */
+/* Media Query for Min-width */
+/* Media Query for Min & Max Width */
+/* Media Query for Max Height */
+/* Media Query for Min Height */
+/*======= Flex Functions and Prefix Start */
+/* Flex - Justify , Align */
+/*  Flex Justify */
+/*  Flex - Align */
+/* Flex Direction */
+/*======= Flex Functions and Prefix End */
+/*======= Position Property Start */
+/* Position Absolute Center */
+/* Position Zero */
+/*======= Position Property End */
+/*  Custom Overlay */
+/*  Transition */
+/*  ::before */
+/* Main Text */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+span,
+small,
+strong,
+address,
+ul,
+li,
+a,
+label,
+p {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a:hover,
+button:hover {
+  outline: none;
+  text-decoration: none;
+  border: none;
+  color: unset;
+}
+
+a:focus,
+button:focus {
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+
+.btn.focus,
+.btn:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 0 white;
+          box-shadow: 0 0 0 0 white;
+}
+
+:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: transparent;
+  border-bottom: 1px solid #bfbfbf;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0 white;
+          box-shadow: 0 0 0 0 white;
+  border-radius: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Poppins-Regular";
+}
+
+button {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+input,
+select {
+  cursor: pointer;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 5px !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+}
+
+input::-webkit-input-placeholder, input:-ms-input-placeholder, input::-webkit-input-placeholder {
+  text-align: left;
+  font: normal normal normal 16px/24px Poppins;
+  letter-spacing: 0.8px;
+  color: #b2b2b2;
+  opacity: 1;
+  font-family: "Poppins-Regular";
+}
+
+input::-webkit-input-placeholder, input:-ms-input-placeholder, input::placeholder {
+  text-align: left;
+  font: normal normal normal 16px/24px Poppins;
+  letter-spacing: 0.8px;
+  color: #b2b2b2;
+  opacity: 1;
+  font-family: "Poppins-Regular";
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: transparent;
+  opacity: 1;
+  border: 0;
+  color: #97005e;
+}
+
+/* Custom checkbox begins here*/
+/* The container */
+.checkWrap {
+  display: block;
+  position: relative;
+  margin-top: -8px;
+  padding-right: 25px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkWrap input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: transparent;
+  border: 1px solid #97005e;
+}
+
+/* On mouse-over, add a grey background color */
+.checkWrap:hover input ~ .checkmark {
+  background-color: transparent;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkWrap input:checked ~ .checkmark {
+  background-color: #97005e;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkWrap input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkWrap .checkmark:after {
+  left: 4px;
+  top: 0;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Custom checkbox ends here*/
+.hs-bookApp-container {
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.hs-bookApp-container .section-subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hs-bookApp-container .section-subtitle p {
+  text-align: left;
+  font: normal normal 600 16px/30px Poppins;
+  letter-spacing: 0.9px;
+  color: #97005e;
+  opacity: 1;
+  font-family: "Poppins-SemiBold";
+}
+
+.hs-bookApp-container .section-subtitle .secondlink {
+  text-decoration: underline;
+  font: normal normal normal 14px/21px Poppins;
+  letter-spacing: 0px;
+  color: #97005e;
+  opacity: 1;
+  font-family: "Poppins-Regular";
+  cursor: pointer;
+}
+
+.hs-bookApp-container .section-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hs-bookApp-container .section-title p {
+  text-align: left;
+  font: normal normal 600 21px/31px Poppins;
+  letter-spacing: 0.42px;
+  color: #97005e;
+  opacity: 1;
+  font-family: "Poppins-SemiBold";
+  margin: 36px 0;
+  text-transform: capitalize;
+}
+
+.hs-bookApp-container .section-title .secondlink {
+  text-decoration: underline;
+  font: normal normal normal 14px/21px Poppins;
+  letter-spacing: 0px;
+  color: #97005e;
+  opacity: 1;
+  font-family: "Poppins-Regular";
+  cursor: pointer;
+}
+
+.hs-bookApp-container label {
+  text-align: left;
+  font: normal normal 500 14px/21px Poppins;
+  letter-spacing: 0.78px;
+  color: #97005e;
+  text-transform: uppercase;
+  opacity: 1;
+  font-family: "Poppins-Medium";
+}
+
+.hs-bookApp-container select {
+  text-align: left;
+  font: normal normal normal 16px/25px Poppins;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  font-family: "Poppins-Regular";
+  margin-top: 0;
+}
+
+.hs-bookApp-container select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(.././images/arrow-down.svg) no-repeat;
+  background-position-x: calc(100% - 10px);
+  background-position-y: 14px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #97005e;
+  padding-left: 0;
+  height: 30px !important;
+}
+
+.hs-bookApp-container .form-group {
+  margin-bottom: 30px;
+}
+
+.hs-bookApp-container input {
+  text-align: left;
+  font: normal normal normal 16px/24px Poppins;
+  letter-spacing: 0.9px;
+  color: #000000;
+  opacity: 1;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #97005e;
+  font-family: "Poppins-Regular";
+  padding-left: 0;
+  height: 30px;
+}
+
+.hs-bookApp-container .errorMsg p {
+  text-align: left;
+  font: normal normal 600 16px/30px Poppins;
+  letter-spacing: 0.9px;
+  color: red;
+  opacity: 1;
+  font-family: "Poppins-Light";
+  margin-top: 4px;
+}
+
+.hs-bookApp-container .successMsg p {
+  text-align: left;
+  font: normal normal 600 16px/30px Poppins;
+  letter-spacing: 0.9px;
+  color: green;
+  opacity: 1;
+  font-family: "Poppins-Light";
+  margin-top: 4px;
+}
+
+.hs-bookApp-container .btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .hs-bookApp-container .btn-wrap {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.hs-bookApp-container .btn-wrap .hs-proceedbtn {
+  margin: 44px 0;
+}
+
+.hs-bookApp-container .btn-wrap .hs-proceedbtn button {
+  min-width: 125px;
+  height: 45px;
+  opacity: 1;
+  border-radius: 25px;
+  background-color: #97005e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffffff;
+  font-family: "Poppins-Regular";
+  font: normal normal normal 14px/24px Poppins;
+  letter-spacing: 0.9px;
+  font-family: "Poppins-Regular";
+  padding: 0 25px;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .hs-bookApp-container .btn-wrap .hs-proceedbtn button {
+    min-width: 265px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hs-bookApp-container .btn-wrap .hs-proceedbtn button {
+    margin: 0 auto;
+  }
+}
+
+.hs-bookApp-container .btn-wrap .hs-previousbtn {
+  margin-right: 18px;
+}
+
+.hs-bookApp-container .btn-wrap .hs-previousbtn button {
+  background-color: #feceec;
+  color: #97005e;
+}
+
+.hs-bookApp-container .btn-wrap .hs-addMember {
+  margin-top: 8px;
+  margin-bottom: 44px;
+}
+
+.hs-bookApp-container .btn-wrap .hs-addMember button.addmember-btn {
+  background-color: transparent;
+  color: #97005e;
+  border: 1px solid #97005e;
+  background: url(.././images/plus.svg) no-repeat;
+  background-position-x: calc(100% - 30px);
+  background-position-y: center;
+}
+
+@media (max-width: 767px) {
+  .hs-bookApp-container .btn-wrap .hs-addMember button.addmember-btn {
+    background-position-x: calc(100% - 20px);
+  }
+}
+
+.hs-bookApp-container .btn-wrap .hs-addMember button.addmember-btn:hover {
+  background: url(.././images/plus-white.svg) no-repeat;
+  background-position-x: calc(100% - 30px);
+  background-position-y: center;
+  background-color: #97005e;
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .hs-bookApp-container .btn-wrap .hs-addMember button.addmember-btn:hover {
+    background-position-x: calc(100% - 20px);
+  }
+}
+
+.hs-bookApp-container .memberDetails {
+  margin-bottom: 25px;
+  margin-top: -30px;
+}
+
+.hs-bookApp-container .hs-bookoptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+  margin-top: 22px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .hs-bookApp-container .hs-bookoptions {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.hs-bookApp-container .hs-bookoptions .form-check-label {
+  text-align: left;
+  font: normal normal normal 16px/30px Poppins;
+  letter-spacing: 0.9px;
+  color: #212529;
+  opacity: 1;
+  font-family: "Poppins-Regular";
+}
+
+.hs-bookApp-container .timeslot-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+  row-gap: 15px;
+}
+
+@media (min-width: 768px) {
+  .hs-bookApp-container .timeslot-wrap {
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
+  }
+}
+
+.hs-bookApp-container .timeSlotBtn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
+  /*grow | shrink | basis */
+}
+
+.hs-bookApp-container .dateCalendarbox {
+  position: relative;
+}
+
+.hs-bookApp-container .dateCalendarbox .dateCalendarImg {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.hs-bookApp-container .timeslot-wrap .timeSlotBtn {
+  border: 1px solid #97005e;
+  color: #97005e;
+  background-color: transparent;
+  border-radius: 25px;
+}
+
+.hs-bookApp-container .timeslot-wrap .active {
+  background-color: #97005e;
+  color: #ffffff;
+}
+
+.hs-bookApp-container .timeslot-wrap input:checked {
+  background-color: #97005e;
+  color: #ffffff;
+}
+
+.rdio {
+  position: relative;
+}
+
+.rdio input[type="radio"] {
+  opacity: 0;
+}
+
+.rdio label {
+  padding-left: 40px;
+  cursor: pointer;
+  margin-bottom: 7px !important;
+}
+
+.rdio label:before {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  content: "";
+  display: inline-block;
+  border-radius: 50px;
+  border: 1px solid #97005e;
+  background: #ffffff;
+}
+
+.rdio input[type="radio"] {
+  margin: 0px;
+}
+
+.rdio input[type="radio"]:disabled + label {
+  color: #999;
+}
+
+.rdio input[type="radio"]:disabled + label:before {
+  background-color: #97005e;
+}
+
+.rdio input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  display: inline-block;
+  font-size: 11px;
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50px;
+}
+
+.rdio-default input[type="radio"]:checked + label:before {
+  border-color: #97005e;
+}
+
+.rdio-primary input[type="radio"]:checked + label:before {
+  border-color: #97005e;
+  background: #97005e;
+}
+
+.rdio-primary input[type="radio"]:checked + label::after {
+  background-color: #ffffff;
+}
+
+.otp-input {
+  width: 50px !important;
+  height: 50px !important;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #97005e !important;
+  border-radius: 9px !important;
+  opacity: 1;
+  margin-right: 20px;
+  padding: 10px !important;
+  text-align: center !important;
+}
+
+.digit-group {
+  margin: 24px 0;
+}
+
+.resend-OTP {
+  cursor: pointer;
+}
+
+.locationMap {
+  width: auto;
+  height: 232px;
+  margin-bottom: 30px;
+}
+
+.inputIconPlacer {
+  position: relative;
+}
+
+.inputIconPlacer input {
+  background: url(.././images/calendar.svg) no-repeat;
+  background-position-x: calc(100% - 10px);
+}
+
+.inputIconPlacer .changeDate {
+  position: absolute;
+  top: 10px;
+}
+
+.inputIconPlacer .changeDate p {
+  text-decoration: underline;
+  font: normal normal normal 12px/18px Poppins;
+  letter-spacing: 0px;
+  color: #97005e;
+  opacity: 1;
+  font-family: "Poppins-Regular";
+}
+
+.userlocation input {
+  background: url(.././images/location-pin.svg) no-repeat;
+  background-position-x: calc(100% - 10px);
+}
+
+.hs-paymentDetails input {
+  border: none;
+  font: normal normal 600 16px/24px Poppins;
+  letter-spacing: 0.9px;
+  color: #97005e;
+  text-transform: capitalize;
+  opacity: 1;
+  font-family: "Poppins-SemiBold";
+}
+
+.hs-paymentDetails input[type="email"] {
+  text-transform: lowercase;
+}
+
+.hs-paymentDetails .hs-totalCost p {
+  text-align: left;
+  font: normal normal 600 16px/32px Poppins;
+  letter-spacing: 0.9px;
+  color: #97005e;
+  opacity: 1;
+  font-family: "Poppins-SemiBold";
+}
+
+@media (min-width: 768px) {
+  .hs-paymentDetails .hs-totalCost p {
+    font: normal normal normal 21px/21px Poppins;
+    letter-spacing: 1.18px;
+    color: #000000;
+    font-family: "Poppins-Regular";
+  }
+}
+
+.hs-paymentDetails .hs-bookoptions input[type="radio"] + label {
+  font: normal normal normal 16px/24px Poppins;
+  color: #000000;
+  opacity: 1;
+  font-family: "Poppins-Medium";
+  margin-top: 3px;
+}
+
+.thanks-select {
+  margin: 50px 0 30px;
+}
+
+.ui-state-default {
+  line-height: 2rem;
+}
+
+.ui-datepicker-unselectable {
+  width: 2.5rem;
+  text-align: center;
+  padding: 0;
+  color: #beb9b9;
+  cursor: no-drop;
+}
+
+.ui-datepicker-year {
+  padding: 2px !important;
+  padding-left: 10px !important;
+  border-radius: 10px;
+}
+
+.ui-datepicker-calendar tbody td a.ui-state-active {
+  background: #9dd84d;
+  color: #ffffff;
+}
+
+.ui-datepicker-calendar tbody td a:hover {
+  background: #feceec;
+  color: #ffffff;
+}
+
+.ui-datepicker-calendar tbody td a.ui-state-highlight {
+  color: #ffffff;
+  border: 1px solid #97005e;
+  background: #97005e;
+}
+
+select:invalid {
+  text-align: left;
+  font: normal normal normal 16px/24px Poppins;
+  letter-spacing: 0.8px;
+  color: #687780;
+  opacity: 1;
+  font-family: "Poppins-Regular";
+}
+
+.memberAccordion .accordionPanel {
+  margin-top: 10px;
+}
+
+.memberAccordion .card-title-member {
+  text-align: left;
+  font: normal normal 500 16px/24px Poppins;
+  letter-spacing: 0.9px;
+  color: #000000;
+  text-transform: capitalize;
+  opacity: 1;
+  font-family: "Poppins-Medium";
+}
+
+.memberAccordion .accordion .card-header-member {
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.memberAccordion .accordion .card-header-member:after {
+  float: right;
+  content: url(.././images/minus.svg);
+}
+
+.memberAccordion .accordion .card-header-member.collapsed:after {
+  /* symbol for "collapsed" panels */
+  content: url(.././images/plus.svg);
+}
+
+.paymentOption-panel {
+  margin: 44px 0 20px !important;
+}
+
+@media (max-width: 767px) {
+  .hs-paymentDetails .form-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .hs-paymentDetails .form-group label {
+    width: 127px;
+    margin-bottom: 0;
+  }
+}
+
+.list-group-item-action.active {
+  background-color: #97005e;
+  border: none;
+  font-weight: bold;
+  color: #fff !important;
+  padding: 15px 9px !important;
+}
+
+.cancelBookingTable {
+  overflow-x: auto;
+  padding: 15px 0 40px;
+}
+
+.cancelBookingTable input {
+  border: none;
+}
+
+.cancelBookingTable th {
+  border: 0;
+}
+
+.cancelBookingTable td {
+  border: 0;
+  padding: 10px 0;
+}
+
+.cancelBookingTable tr td:first-child {
+  width: 35px;
+}
+
+.label-box {
+  margin-bottom: 36px;
+}
+
+.intl-tel-input .selected-flag {
+  padding: 0px 0 0px 0px;
+}
+
+#map-container {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  margin-bottom: 1rem;
+  height: 232px;
+  position: relative;
+}
+
+#map-container #map-container-inner {
+  display: block;
+  width: 100%;
+  height: 232px;
+  padding: 56.25% 0 0;
+  overflow: hidden;
+}
+
+#map-container #map-container-inner #map {
+  background-color: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+#geolocateButton {
+  position: absolute;
+  top: 22px;
+  right: 7px;
+  background-color: white;
+  border: 0;
+  color: #97005e;
+}
+
+textarea {
+  border: none;
+  font: normal normal normal 16px/24px Poppins;
+  letter-spacing: 0.9px;
+  color: #97005e;
+  text-transform: capitalize;
+  opacity: 1;
+  word-break: break-word;
+  padding-left: 0 !important;
+  resize: none;
+}
+
+.hs-bookingDetails .ui-state-default,
+.hs-bookingDetails .ui-widget-content .ui-state-default,
+.hs-bookingDetails .ui-widget-header .ui-state-default {
+  color: #ffffff;
+  background-color: #97005e;
+}
+
+.ui-datepicker-header a.ui-datepicker-next.ui-state-disabled::after {
+  color: #beb9b9;
+}
+/*# sourceMappingURL=style.css.map */

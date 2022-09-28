@@ -1,0 +1,146 @@
+body {
+   overflow-x: hidden;
+}
+a {
+   text-decoration: none;
+}
+.service-container {
+   width: 100%;
+   padding-right: 15px;
+   padding-left: 15px;
+   margin-right: 0;
+   margin-bottom: 50px;
+   background-color: #ffffff;
+   @media (max-width: 767px) {
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 30px;
+   }
+
+   .hp-library {
+      .sectionTitle {
+         p {
+            text-align: center;
+            letter-spacing: 2.4px;
+            color: #97005e;
+            opacity: 1;
+            margin-top: 55px;
+            margin-bottom: 46px;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: "Poppins-SemiBold";
+         }
+      }
+      .librarySlider {
+         @media (min-width: 768px) {
+            margin-left: 130px;
+         }
+         .libraryPanel {
+            background: #f8f8f8 0% 0% no-repeat padding-box;
+            border-radius: 12px;
+            opacity: 1;
+            padding: 15px;
+            max-width: 286px;
+            height: 420px;
+            width: 286px;
+            max-height: 420px;
+            position: relative;
+            @media (max-width: 767px) {
+               margin: 0 auto;
+            }
+
+            .itemsOnImg {
+               position: absolute;
+               bottom: 6px;
+               .libraryTexts {
+                  .title {
+                     text-align: left;
+                     letter-spacing: 0.32px;
+                     color: #ffffff;
+                     opacity: 1;
+                     font-size: 18px;
+                     font-family: "Poppins-SemiBold";
+                     margin-bottom: 0;
+                     margin-top: 25px;
+                     word-break: break-word;
+                  }
+                  .writtenBy {
+                     text-align: left;
+                     font-size: 14px;
+                     letter-spacing: 0.28px;
+                     font-family: "Poppins-SemiBold";
+                     color: #ffffff;
+                     span {
+                        text-align: left;
+                        letter-spacing: 0.28px;
+                        color: #ffffff;
+                        font-size: 14px;
+                        font-family: "Poppins-Regular";
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+   // slider arrow changes begins here
+   .slick-next:before,
+   [dir="rtl"] .slick-prev:before {
+      content: url(../images/arrowSet/arrow-next.svg);
+   }
+
+   .slick-prev:before {
+      content: url(../images/arrowSet/arrow-back.svg);
+   }
+
+   @media (min-width: 768px) {
+      .slick-next:before,
+      [dir="rtl"] .slick-prev:before {
+         content: url(../images/arrowSet/forward-arrow.svg);
+      }
+
+      .slick-prev:before {
+         content: url(../images/arrowSet/backward-arrow.svg);
+      }
+   }
+   .slick-next {
+      right: 15px;
+      z-index: 999;
+   }
+   .slick-prev {
+      left: 15px;
+      z-index: 999;
+   }
+   @media (min-width: 768px) {
+      .slick-dots,
+      .slick-next,
+      .slick-prev {
+         position: absolute;
+         display: block;
+         padding: 0;
+         top: -34px;
+         right: 325px;
+         width: 25px;
+         height: 20px;
+      }
+      .slick-prev {
+         left: unset !important;
+         right: 280px !important;
+      }
+   }
+   // slider arrow changes ends here
+}
+.hp-libraryDescription p:first-child,
+.hp-libraryDescription p:last-child {
+   display: none;
+}
+
+@media (min-width: 768px) {
+   .slick-prev:hover,
+   .slick-prev:focus,
+   .slick-next:hover,
+   .slick-next:focus {
+      width: 25px;
+      height: 20px;
+   }
+}

@@ -1,0 +1,103 @@
+/* Font Color  */
+/* Box Shadow */
+/* Scroll */
+/* Media Query for Max-width */
+/* Media Query for Min-width */
+/* Media Query for Min & Max Width */
+/* Media Query for Max Height */
+/* Media Query for Min Height */
+/*======= Flex Functions and Prefix Start */
+/* Flex - Justify , Align */
+/*  Flex Justify */
+/*  Flex - Align */
+/* Flex Direction */
+/*======= Flex Functions and Prefix End */
+/*======= Position Property Start */
+/* Position Absolute Center */
+/* Position Zero */
+/*======= Position Property End */
+/*  Custom Overlay */
+/*  Transition */
+/*  ::before */
+/* Main Text */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+span,
+small,
+strong,
+address,
+ul,
+li,
+a,
+label,
+p {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a:hover,
+button:hover {
+  outline: none;
+  text-decoration: none;
+  border: none;
+  color: unset;
+}
+
+a:focus,
+button:focus {
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+
+.btn.focus,
+.btn:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 0 white;
+          box-shadow: 0 0 0 0 white;
+}
+
+:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: transparent;
+  border-bottom: 1px solid #bfbfbf;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0 white;
+          box-shadow: 0 0 0 0 white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "MyriadPro-Regular";
+}
+
+/* Small devices (landscape phones, 576px and up) */
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+/* Large devices (desktops, 992px and up) */
+/* Extra large devices (large desktops, 1200px and up) */
+/*# sourceMappingURL=style.css.map */

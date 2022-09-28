@@ -1,0 +1,28 @@
+.report-container {
+   .h-requestwrap {
+      height: 190px;
+      border-radius: 5px;
+      border: solid 0.8px #dea4c8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+   }
+   .d-openPage {
+      position: absolute;
+      bottom: 26px;
+      right: 28px;
+      width: 18px;
+      height: 18px;
+      img {
+         width: 100%;
+         height: 100%;
+      }
+   }
+   .topBox{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+}

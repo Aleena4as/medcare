@@ -1,0 +1,83 @@
+.headingMain {
+   object-fit: contain;
+   font-family: Poppins-SemiBold;
+   font-size: 28px;
+   font-weight: 600;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: 1.39;
+   letter-spacing: normal;
+   text-align: left;
+   color: #000;
+   margin-top: 38px;
+   margin-bottom: 24px;
+}
+.box-title {
+   object-fit: contain;
+   font-family: Poppins-Regular;
+   font-size: 18px;
+   font-weight: normal;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: 1.89;
+   letter-spacing: 0.05px;
+   text-align: center;
+   color: #333;
+   margin-bottom: 12px;
+}
+.boxlargeCount {
+   object-fit: contain;
+   font-family: Poppins-Bold;
+   font-size: 48px;
+   font-weight: bold;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: 1.5;
+   letter-spacing: normal;
+   text-align: center;
+   color: #000;
+   margin-bottom: 0;
+}
+.topBox {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+#calendar {
+   width: 100%;
+   margin: 0 auto;
+}
+.d-filterWrap {
+   margin: 25px 0;
+}
+.generalBtn {
+   width: 150px;
+   height: 44px;
+   border-radius: 4px;
+   background-color: #97005e;
+   font-family: "Poppins-Regular";
+   font-size: 14px;
+   font-weight: normal;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: 36px;
+   letter-spacing: normal;
+   text-align: center;
+   color: #fff;
+   border: 1px solid transparent;
+   &:hover {
+      color: #fff;
+      background-color: #97005e;
+   }
+}
+
+.disabledforNow {
+   pointer-events: none;
+   cursor: not-allowed !important;
+}
+
+#patient-newBookingDate,
+#patient-Timeslot,
+#patient-BookService {
+   cursor: no-drop;
+}

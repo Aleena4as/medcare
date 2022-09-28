@@ -1,0 +1,220 @@
+.newhomeservcice{
+	    padding-left: 0;
+}
+#healthformnew{
+	display: none;
+}
+.actionInnerPageleft{
+	display: none !important; 
+}
+
+.healthformnew1{
+	display: block !important;
+}
+ .powermail_label{
+      text-align: left;
+    width: 100%;
+}
+
+ .form-field-error{
+      text-align: left;
+      width: 100%;
+      color: red;
+    font-size: 16px !important;
+    font-style: italic;
+    font-weight: 600;
+}
+
+  .main-heading{
+    font-size: 16px;
+    color: #97015F;
+    /* font-weight: bold; */
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+ #newcountry_origin{
+      border-radius: 0!important;
+    border: 0;
+    height: calc(1.5em + .6rem + 2px) !important;
+    width: 100% !important;
+    font-size: 16px;
+    border-bottom: 1px solid rgb(150, 7, 94)!important;
+    padding: 0!important;
+    font-weight: 100;
+    margin-bottom: 1rem!important;
+    color: #97005e!important;
+    
+}
+
+ #packageorigin{
+      border-radius: 0!important;
+    border: 0;
+    height: calc(1.5em + .6rem + 2px) !important;
+    width: 100% !important;
+    font-size: 16px;
+    border-bottom: 1px solid rgb(150, 7, 94)!important;
+    padding: 0!important;
+    font-weight: 100;
+    margin-bottom: 1rem!important;
+    color: #97005e!important;
+}
+
+  .co-alre select{
+          width: 40% !important;
+    display: inline-block;
+    margin: 0 !important;
+    padding: 5px !important;
+    background: transparent;
+        /*pointer-events: unset;
+    cursor: not-allowed;*/
+
+    padding: 4px !important;
+}
+  .co-alre input{
+      width: 57%;
+    display: inline-block;
+    font-size: 16px !important;
+    font-style: unset;
+    font-weight: unset !important;
+}
+.co-alre textarea{
+      width: 57%;
+    display: inline-block;
+    font-size: 16px !important;
+    font-style: unset;
+    font-weight: unset !important;
+}
+.co-alre  textarea{
+      border-radius: 0!important;
+    border: 0;
+    width: 100%;
+    font-size: 16px;
+    border-bottom: 1px solid rgb(150, 7, 94)!important;
+    padding: 0!important;
+    font-weight: 100;
+    margin-bottom: 1rem!important;
+        color: #97005e !important;
+        font-size: 16px !important;
+    font-style: unset !items;
+    font-weight: unset !important;
+    /*color: #97005e!important;*/
+}
+ .co-alre input{
+      border-radius: 0!important;
+    border: 0;
+    height: calc(1.3em + .6rem + 2px) !important;
+    width: 100%;
+    font-size: 16px;
+    border-bottom: 1px solid rgb(150, 7, 94)!important;
+    padding: 0!important;
+    font-weight: 100;
+    margin-bottom: 1rem!important;
+        color: #97005e !important;
+        font-size: 16px !important;
+    font-style: unset !items;
+    font-weight: unset !important;
+    /*color: #97005e!important;*/
+}
+
+ .co-alre button{
+  background-color: #97005e;
+    display: block !important;
+    padding: 5px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    color: #fff!important;
+    border: unset;
+    text-align: right;
+}
+
+
+
+
+
+  .co-alre select::-ms-expand {
+    display: none;
+}
+
+
+
+.ssectionfootnonw{
+	display: none !important;
+}
+
+
+
+.co-alre button.cancel {
+    display: none !important;
+}
+
+#newseeclocation{
+	    width: 17% !important;
+    display: inline-block;
+    float: right;
+}
+
+.hiddenSharjah{
+	display: none !important;
+}
+
+.Dubai{
+	display: block;
+}
+
+.hiddenDubai{
+display: none !important;	
+}
+
+.Sharjah{
+display: block;	
+}
+
+/*#healthformnew{
+	display: none !important;
+}*/
+
+
+
+@media (max-width: 576px){
+
+#newseeclocation{
+	    width: 80% !important;
+    display: inline-block;
+    text-align: center;
+    float: unset !important;
+}
+.servicepgage h2 {
+  height: 25px !important;
+}
+}
+
+.Sharjah{
+  display: none;
+}
+
+.hiddenSharjah1{
+    display: block !important;
+}
+
+.linespace {
+    float: left;
+    padding-left: 30px;
+    font-size: 16px;
+    color: #97005e;
+    font-weight: bold;
+   margin-bottom: 30px;
+    line-height: unset;
+        padding-top: 10px;
+}
+.seccon {
+    padding-top: 25px;
+}
+
+
+@media (min-width: 576px){
+
+  .servicepgage h2{
+    height: 60px !important;
+  }
+

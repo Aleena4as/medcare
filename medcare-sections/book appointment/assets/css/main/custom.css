@@ -1,0 +1,305 @@
+#parsley-id-multiple-tx_powermail_pi1fieldtermsandconditions{
+	float: left;
+    margin-top: -40px;
+}
+
+.parsley-required, .parsley-custom-error-message{
+	list-style: none;
+	color: red;
+	margin-left:-40px;
+}
+.paddingTable th{
+	width: 95px;
+}
+
+.list-group-item-action.is-checked {
+    background-color: #97005e;
+    border: none;
+    font-weight: bold;
+    color: #fff !important;
+    padding: 15px 9px !important;
+}
+.list-group-item-action.is-checked .arrowright path, .list-group-item-action.is-checked .arrowright rect {
+    fill: #fff;
+}
+
+#below-scroll{
+	cursor: pointer;
+}
+
+.viewMap a{
+	color: #97005E;
+	text-decoration: none;
+}
+#check_new_look_books{
+	font-size: 21px !important;
+}
+
+.special-links ul li a, 
+.megamenu .dropdown-item ul li a{
+	color: inherit;
+	text-decoration: none;
+}
+.ml-1 b a {
+    color: #97005E;
+    line-height: 2;
+}
+
+select#insurencefilter option {
+    color: black;
+}
+
+ul.specialisationsUl a{
+	color: white;
+	text-decoration: none;
+}
+.specialisationsList li a {
+	color: #97005E;
+	text-decoration: none;
+}
+.rm-blue{
+	color:#97005E !important;
+}
+
+.colorTheme a {
+	text-decoration:none !important;
+}
+.marginSection p {
+	line-height:30px !important;
+	margin-bottom:0px !important;
+}
+.innerPageHeadingBg .col-md-2.my-auto {
+	    margin-bottom: 0px !important;
+}
+/*.innerPageHeadingBg {
+	background-size: 100% !important;
+}*/
+/*.col-md-3.my-auto .ballonConatiner {
+	width:70% !important;
+}*/
+.mt-5 {
+	margin-top: 2.8rem !important;
+}
+.form-control-sm {
+	height: calc(1.5em + .6rem + 2px) !important;
+}
+/*.col-lg-2.searchAlign {
+    margin-top: 1px !important;
+}*/
+.dr-detail-img{
+	width: 80%;
+	height: auto;
+}
+.container.padd .mt-5 {
+	margin-top:3rem !important;	
+}
+.subDoctorPics {
+	right:0px !important;	
+}
+/*.container {
+	width:1141px !important;
+}*/
+.sectionHeading.colorWhite.fontSize {
+	font-size:20px !important;
+}
+.withoutImage .breadCrumb {
+    padding: 28px 0 !important;
+}
+.locationButton, .locationButton:focus {
+	border:none;
+	background:#FFF;
+	outline:none!important;
+}
+.locationButtonActive {
+	font-weight:bold;
+}
+.tx-indexedsearch-title a {
+	color: #97005E !important
+}
+
+.site-ar .enBtn {
+	background: none;
+}
+
+.site-ar .arBtn {
+	background: #97005E;
+}
+
+.site-ar #powermail_field_termsandconditions_1 {
+    margin-top: 5px;
+    margin-right: -20px;
+}
+
+/* FAQ CSS */
+
+.medcare-faq .transition, .medcare-faq p, .medcare-faq ul.medcare-faq-ul  li.medcare-faq-item i:before, .medcare-faq ul.medcare-faq-ul  li.medcare-faq-item i:after {
+  transition: all 0.4s;
+}
+
+.medcare-faq .flipIn, .medcare-faq h1, .medcare-faq ul.medcare-faq-ul  li.medcare-faq-item {
+  animation: flipdown 0.5s ease both;
+}
+
+.medcare-faq .no-select, .medcare-faq h2 {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.medcare-faq ul.medcare-faq-ul  {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0;
+}
+.medcare-faq ul.medcare-faq-ul  li.medcare-faq-item {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 4px;
+  padding-top: 18px;
+  border-top: 1px dotted #dce7eb;
+}
+.medcare-faq ul.medcare-faq-ul  li.medcare-faq-item:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+.medcare-faq ul.medcare-faq-ul  li.medcare-faq-item:nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+.medcare-faq ul.medcare-faq-ul  li.medcare-faq-item:nth-of-type(3) {
+  animation-delay: 1s;
+}
+.medcare-faq ul.medcare-faq-ul  li.medcare-faq-item:last-of-type {
+  padding-bottom: 0;
+}
+.medcare-faq ul.medcare-faq-ul  li.medcare-faq-item i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 16px;
+  top: 5px;
+}
+.site-ar .medcare-faq ul.medcare-faq-ul  li.medcare-faq-item i {
+	left: 0;
+}
+.site-en .medcare-faq ul.medcare-faq-ul  li.medcare-faq-item i {
+	right: 0;
+}
+.medcare-faq ul.medcare-faq-ul  li.medcare-faq-item i:before, .medcare-faq ul.medcare-faq-ul  li.medcare-faq-item i:after {
+  content: "";
+  position: absolute;
+  background-color: #97005E;
+  width: 3px;
+  height: 9px;
+}
+.medcare-faq ul.medcare-faq-ul  li.medcare-faq-item i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+.medcare-faq ul.medcare-faq-ul  li.medcare-faq-item i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+.medcare-faq ul.medcare-faq-ul  li.medcare-faq-item input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+.medcare-faq ul.medcare-faq-ul li.medcare-faq-item input[type=checkbox]:checked ~ p {
+    margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+      margin-top: 1px;
+    margin-bottom: 1px;
+/*  margin-top: 0;
+  max-height: 0;
+  opacity: 0;*/
+  /*transform: translate(0, 50%);*/
+}
+.medcare-faq ul.medcare-faq-ul li.medcare-faq-item input[type=checkbox]:checked ~ ul {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  /*transform: translate(0, 50%);*/
+}
+
+.medcare-faq ul.medcare-faq-ul  li.medcare-faq-item input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.medcare-faq ul.medcare-faq-ul  li.medcare-faq-item input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+.medcare-faq h2 {
+	font-size: 16px;
+	padding-right: 10px;
+	/*font-weight:bold;*/
+}
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  80% {
+    transform: rotateX(8deg);
+  }
+  83% {
+    transform: rotateX(6deg);
+  }
+  92% {
+    transform: rotateX(-3deg);
+  }
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+  }
+}
+
+.faq-accordion {
+	/*
+  background-color: #eee;
+  color: #444; */
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-weight:bold;
+  transition: 0.4s;
+  background:none;
+}
+
+.faq-accordion-active, .faq-accordion:hover {
+  /*background-color: #ccc; */
+}
+
+.medcare-faq p {
+  padding: 0 18px;
+  /*display: none;*/
+  background-color: white;
+  overflow: hidden;
+      position: relative;
+    z-index: 999999;
+}
+.medcare-faq p span{
+ 
+    font-weight: normal !important;
+}
+@media (max-width: 576px){
+ .medcare-faq h2 {
+    font-size: 12px;
+    padding-right: 10px;
+    margin-right: 10px;
+    /* font-weight: bold; */
+}
+}
+
+/* FAQ CSS END */

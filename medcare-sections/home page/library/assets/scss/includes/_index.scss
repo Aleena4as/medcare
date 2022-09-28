@@ -1,0 +1,154 @@
+body {
+   overflow-x: hidden;
+}
+a {
+   text-decoration: none;
+}
+.service-container {
+   width: 100%;
+   padding-right: 15px;
+   padding-left: 15px;
+   margin-right: 0;
+   margin-bottom: 50px;
+   background-color: #ffffff;
+   @media (max-width: 767px) {
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 30px;
+   }
+
+   .hp-library {
+      .sectionTitle {
+         p {
+            text-align: center;
+            font: normal normal 600 16px/62px Poppins;
+            letter-spacing: 2.4px;
+            color: #97005e;
+            opacity: 1;
+            margin-top: 55px;
+            margin-bottom: 46px;
+         }
+      }
+      .librarySlider {
+         @media (min-width: 768px) {
+            margin-left: 130px;
+         }
+         .libraryPanel {
+            background: #f8f8f8 0% 0% no-repeat padding-box;
+            border-radius: 12px;
+            opacity: 1;
+            padding: 15px;
+            max-width: 286px;
+            height: 420px;
+            max-height: 420px;
+            @media (max-width: 767px) {
+               margin: 0 auto;
+            }
+            .hp-libraryImg {
+               width: auto;
+               height: auto;
+               border-radius: 15px;
+               img {
+                  width: 100%;
+                  height: 100%;
+               }
+            }
+            .libraryTexts {
+               .title {
+                  text-align: left;
+                  font: normal normal normal 16px/21px Poppins;
+                  letter-spacing: 0.32px;
+                  color: #000000;
+                  opacity: 1;
+                  font-family: Poppins-Medium;
+                  margin-bottom: 0;
+                  margin-top: 25px;
+               }
+               .writtenBy {
+                  text-align: left;
+                  font: normal normal 600 14px/21px Poppins;
+                  letter-spacing: 0.28px;
+                  color: #000000;
+                  font-family: Poppins-SemiBold;
+                  span {
+                     text-align: left;
+                     font: normal normal normal 14px/21px Poppins;
+                     letter-spacing: 0.28px;
+                     color: #000000;
+                     font-family: Poppins-Regular;
+                  }
+               }
+            }
+            .hp-libraryDescription {
+               p {
+                  text-align: left;
+                  font: normal normal normal 14px/21px Poppins;
+                  letter-spacing: 0.28px;
+                  color: #000000;
+                  opacity: 1;
+                  font-family: Poppins-Regular;
+                  margin-top: 16px;
+                  margin-bottom: 20px;
+               }
+            }
+         }
+      }
+   }
+   // slider arrow changes begins here
+   .slick-next:before,
+   [dir="rtl"] .slick-prev:before {
+      content: url(../images/arrowSet/arrow-next.svg);
+   }
+
+   .slick-prev:before {
+      content: url(../images/arrowSet/arrow-back.svg);
+   }
+
+   @media (min-width: 768px) {
+      .slick-next:before,
+      [dir="rtl"] .slick-prev:before {
+         content: url(../images/arrowSet/forward-arrow.svg);
+      }
+
+      .slick-prev:before {
+         content: url(../images/arrowSet/backward-arrow.svg);
+      }
+   }
+   .slick-next {
+      right: 15px;
+      z-index: 999;
+   }
+   .slick-prev {
+      left: 15px;
+      z-index: 999;
+   }
+   @media (min-width: 768px) {
+      .slick-dots,
+      .slick-next,
+      .slick-prev {
+         position: absolute;
+         display: block;
+         padding: 0;
+         top: -34px;
+         right: 325px;
+         width: 25px;
+         height: 20px;
+      }
+      .slick-prev {
+         left: unset !important;
+         right: 280px !important;
+      }
+   }
+   // slider arrow changes ends here
+}
+.hp-libraryDescription p:first-child,
+.hp-libraryDescription p:last-child {
+   display: none;
+}
+
+@media (min-width: 768px) {
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+   width: 25px;
+   height: 20px;
+   }
+}

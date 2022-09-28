@@ -1,0 +1,127 @@
+/* Font Color  */
+/* Box Shadow */
+/* Scroll */
+/* Media Query for Max-width */
+/* Media Query for Min-width */
+/* Media Query for Min & Max Width */
+/* Media Query for Max Height */
+/* Media Query for Min Height */
+/*======= Flex Functions and Prefix Start */
+/* Flex - Justify , Align */
+/*  Flex Justify */
+/*  Flex - Align */
+/* Flex Direction */
+/*======= Flex Functions and Prefix End */
+/*======= Position Property Start */
+/* Position Absolute Center */
+/* Position Zero */
+/*======= Position Property End */
+/*  Custom Overlay */
+/*  Transition */
+/*  ::before */
+/* Main Text */
+.readMoreText {
+  display: block;
+  white-space: nowrap;
+  width: 15em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hp-sectionTitle {
+  margin: 30px 0 0;
+}
+
+@media (min-width: 768px) {
+  .hp-sectionTitle {
+    margin: 46px 0;
+  }
+}
+
+.hp-sectionTitle p {
+  text-align: center;
+  font: normal normal 600 16px/62px Poppins;
+  letter-spacing: 2.4px;
+  color: #97005e;
+  opacity: 1;
+}
+
+.hp-testimonials-wrap {
+  background: #f8f8f8;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .hp-testimonials-wrap {
+    padding-bottom: 60px;
+  }
+}
+
+.hp-testimonials-wrap .hp-SliderTestimonial {
+  padding: 0 20px;
+}
+
+.hp-testimonials-wrap .hp-SliderTestimonial .hp-testimonialBox .testimonialImg {
+  text-align: center;
+  text-align: -webkit-center;
+  margin-bottom: 24px;
+}
+
+.hp-testimonials-wrap .hp-SliderTestimonial .hp-testimonialBox .hp-testimonialContent .testimonial-title {
+  text-align: center;
+  font: normal normal bold 21px/21px Poppins;
+  letter-spacing: 0.42px;
+  color: #97005e;
+  opacity: 1;
+  font-family: Poppins-Bold;
+  margin-bottom: 12px;
+}
+
+.hp-testimonials-wrap .hp-SliderTestimonial .hp-testimonialBox .hp-testimonialContent .testimonial-description p {
+  text-align: center;
+  font: normal normal normal 16px/24px Poppins;
+  letter-spacing: 0.32px;
+  color: #000000;
+  font-family: Poppins-Regular;
+  margin-bottom: 0;
+}
+
+.hp-testimonials-wrap .hp-SliderTestimonial .hp-testimonialBox .hp-testimonialContent .testimonial-description span a {
+  text-align: center;
+  font: italic normal medium 16px/24px Poppins;
+  letter-spacing: 0.32px;
+  color: #97005e;
+  font-family: Poppins-MediumItalic;
+}
+
+.hp-testimonials-wrap .hp-SliderTestimonial .hp-testimonialBox .hp-testimonialContent .testimonial-writer {
+  text-align: center;
+  font: normal normal 600 16px/21px Poppins;
+  letter-spacing: 0.32px;
+  color: #97005e;
+  opacity: 1;
+  font-family: Poppins-Semibold;
+  margin-top: 24px;
+}
+
+.hp-testimonials-wrap .slick-next:before,
+.hp-testimonials-wrap [dir="rtl"] .slick-prev:before {
+  content: url(../images/arrowSet/arrow-next.svg);
+}
+
+.hp-testimonials-wrap .slick-next {
+  right: 5px;
+  top: 40%;
+  z-index: 9999;
+}
+
+.hp-testimonials-wrap .slick-prev {
+  left: 5px;
+  top: 40%;
+  z-index: 9999;
+}
+
+.hp-testimonials-wrap .slick-prev:before {
+  content: url(../images/arrowSet/arrow-back.svg);
+}
+/*# sourceMappingURL=style.css.map */

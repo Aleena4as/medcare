@@ -1,0 +1,22 @@
+.d-header {
+   height: 102px;
+   width: 100%;
+   background-color: #000000;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   padding: 0 32px;
+   // to keep sticky header
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 10;
+   -webkit-box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
+   -moz-box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
+   box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
+   img {
+      width: auto;
+      height: auto;
+   }
+}

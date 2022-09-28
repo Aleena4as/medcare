@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
+    <title>Medcare Pop-Up</title>
+    <link href="./assets/Bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/scss/style.css" rel="stylesheet" type="text/css" />
+   
+
+</head>
+
+<body>
+
+    <!-- button to open pop-up begins here -->
+    <div class="region-select-popupBtn">
+        <button class="region-openmodal">click</button>
+        <button class="region-openmodal">click</button>
+        <button class="region-openmodal">click</button>
+    </div>
+    <!-- button to open pop-up ends here -->
+
+
+
+    <!-- Modal pop-p content begins here-->
+    <div class="regionPopupBody">
+        <div class="modal fade" id="modalSelectRegion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                 <div class="modal-content">
+                    <div class="modal-body">
+                          <div class="close-regionOpt" data-dismiss="modal">
+                             <img src="/fileadmin/user_upload/Close-popup.svg" alt="close">
+                          </div>
+                          <!-- content begins here -->
+                          <div class="getOptionsforEmirate">
+                             <div class="row">
+                                <div class="col-12">
+                                      <div class="section-subtitle">
+                                         <p class="esite">Select Emirate</p>
+                                         <p class="asite">اختر الإمارة</p>
+                                      </div>
+                                      <div class="hs-regionOptions">
+                                         <div class="rdio rdio-primary">
+                                                 
+                                            <input class="form-check-input" name="bookforEmirate" value="Sharjah"
+                                                  id="bookforSharjah" type="radio" checked>
+                                            <label class="form-check-label" for="bookforSharjah">
+                                                <span class="esite">Sharjah</span>
+                                                <span class="asite">الشارقة</span>
+                                            </label>
+                                            
+                                         </div>
+                                         <div class="rdio rdio-primary ">
+                                             
+                                            <input class="form-check-input" name="bookforEmirate" value="Dubai"
+                                                  id="bookforDubai" type="radio">
+                                            <label class="form-check-label " for="bookforDubai">
+                                                <span class="esite">Dubai </span>
+                                                <span class="asite">دبي </span>
+                                            </label>
+                                         </div>
+                                      </div>
+                                      <div class="proceedbutton">
+                                          <button class="side-button partner-already d-flex justify-content-center esite" onclick="locRedirect()">Proceed</button>
+                                          <button class="side-button partner-already d-flex justify-content-center asite" onclick="locRedirect()">تقدم</button>
+                                      <div>
+                                </div>
+                             </div>
+                          </div>
+                    </div>
+                    
+                 </div>
+              </div>
+        </div>
+</div>
+
+
+
+4:46 PM
+
+style.css
+
+    <!-- Modal pop-p content ends here-->
+
+
+
+    <!-- First Jquery -->
+    <script src="./assets/Bootstrap/jquery.min.js"></script>
+    <!-- Third Bootstrap -->
+    <script src="./assets/Bootstrap/bootstrap.min.js"></script>
+
+    <!-- script to open modal begins here -->
+    <script>
+        $('.region-openmodal').on('click', function (e) {
+            $('#modalSelectRegion').modal('show');
+        });
+    </script>
+    <!-- script to open modal ends here -->
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+* {
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   scroll-behavior: smooth;
+
+}
+html {
+   overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+span,
+small,
+strong,
+address,
+ul,
+li,
+a,
+label,
+p {
+   text-decoration: none;
+   list-style-type: none;
+}
+
+a:hover,
+button:hover {
+   outline: none;
+   text-decoration: none;
+   border: none;
+   color: unset;
+}
+
+a:focus,
+button:focus {
+   outline: none;
+   text-decoration: none;
+   border: none;
+}
+
+.btn.focus,
+.btn:focus {
+   outline: none;
+   box-shadow: 0 0 0 0 white;
+}
+
+:focus {
+   outline: none;
+   -webkit-box-shadow: none;
+   box-shadow: none;
+}
+
+.form-control:focus {
+   color: #495057;
+   background-color: #fff;
+   border-color: transparent;
+   border-bottom: 1px solid #bfbfbf;
+   outline: 0;
+   box-shadow: 0 0 0 0 white;
+   border-radius: inherit;
+}
+body {
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+   font-family: "MyriadPro-Regular";
+}
+button {
+   appearance: none;
+   -moz-appearance: none;
+   -webkit-appearance: none;
+}
+
+// to ignore the blue color background on autofill
+input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  }
+
+// to fix placeholder issues
+// input {
+//    &::-webkit-input-placeholder {
+//       color: #d6d6d6;
+//       font-family: Raleway, sans-serif;
+//       font-weight: 400;
+//       font-style: normal;
+//       color: #000;
+//       font-size: 14px;
+//       line-height: 23px;
+//       text-transform: capitalize;
+//    }
+
+//    &:-ms-input-placeholder {
+//       @extend ::-webkit-input-placeholder;
+//    }
+
+//    &::placeholder {
+//       @extend ::-webkit-input-placeholder;
+//    }
+// }
+
+// for background image using scss sturcture
+// .gracious-form-container {
+//    background: url(.././images/slider_image.jpg), #adadad;
+// }
+
+// @font-face {
+//   font-family: 'MyriadPro-Regular';
+//   src: url('../../fonts/Myriad-Pro-Regular.ttf') format('truetype');
+// }
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+

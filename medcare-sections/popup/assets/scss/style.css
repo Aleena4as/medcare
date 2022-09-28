@@ -1,0 +1,222 @@
+/* Font Color  */
+/* Box Shadow */
+/* Scroll */
+/* Media Query for Max-width */
+/* Media Query for Min-width */
+/* Media Query for Min & Max Width */
+/* Media Query for Max Height */
+/* Media Query for Min Height */
+/*======= Flex Functions and Prefix Start */
+/* Flex - Justify , Align */
+/*  Flex Justify */
+/*  Flex - Align */
+/* Flex Direction */
+/*======= Flex Functions and Prefix End */
+/*======= Position Property Start */
+/* Position Absolute Center */
+/* Position Zero */
+/*======= Position Property End */
+/*  Custom Overlay */
+/*  Transition */
+/*  ::before */
+/* Main Text */
+body,
+.modal-open .page-container,
+.modal-open .page-container .navbar-fixed-top,
+.modal-open .modal-container {
+  overflow-y: scroll;
+}
+
+@media (max-width: 979px) {
+  .modal-open .page-container .navbar-fixed-top {
+    overflow-y: visible;
+  }
+}
+
+.regionPopupBody .modal {
+  position: fixed;
+  top: 25%;
+  padding-top: 15px;
+  text-align: center;
+  text-align: -webkit-center;
+}
+
+.regionPopupBody .modal-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 70%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: none;
+  border-radius: 21px;
+  outline: 0;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.regionPopupBody .close-regionOpt {
+  background-color: #97005e;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+}
+
+.regionPopupBody .getOptionsforEmirate .proceedbutton button {
+  text-align: center !important;
+  margin: 14px auto 5px !important;
+}
+
+.regionPopupBody .getOptionsforEmirate .hs-regionOptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.regionPopupBody .getOptionsforEmirate .hs-regionOptions .form-check-label {
+  text-align: left;
+  font: normal normal normal 16px/30px Poppins;
+  letter-spacing: 0.9px;
+  color: #000000 !important;
+  opacity: 1;
+  font-family: "Poppins-Regular";
+}
+
+.regionPopupBody .getOptionsforEmirate .section-subtitle p {
+  text-align: center;
+  font: normal normal 600 16px/30px Poppins;
+  letter-spacing: 0.9px;
+  color: #000000;
+  opacity: 1;
+  font-family: "Poppins-SemiBold";
+}
+
+.regionPopupBody .rdio {
+  position: relative;
+  margin: 0 10px;
+}
+
+.regionPopupBody .rdio input[type="radio"] {
+  opacity: 0;
+}
+
+.regionPopupBody .rdio label {
+  padding-left: 25px;
+  cursor: pointer;
+  margin-bottom: 7px !important;
+}
+
+.regionPopupBody .rdio label:before {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  content: "";
+  display: inline-block;
+  border-radius: 50px;
+  border: 1px solid #97005e;
+  background: #ffffff;
+}
+
+.regionPopupBody .rdio input[type="radio"] {
+  margin: 0px;
+}
+
+.regionPopupBody .rdio input[type="radio"]:disabled + label {
+  color: #999;
+}
+
+.regionPopupBody .rdio input[type="radio"]:disabled + label:before {
+  background-color: #97005e;
+}
+
+.regionPopupBody .rdio input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  display: inline-block;
+  font-size: 11px;
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50px;
+}
+
+.regionPopupBody .rdio-default input[type="radio"]:checked + label:before {
+  border-color: #97005e;
+}
+
+.regionPopupBody .rdio-primary input[type="radio"]:checked + label:before {
+  border-color: #97005e;
+  background: #97005e;
+}
+
+.regionPopupBody .rdio-primary input[type="radio"]:checked + label::after {
+  background-color: #ffffff;
+}
+@media (min-width: 576px) {
+  .proceedbutton button {
+    background-color: #97005e;
+    display: block !important;
+    padding: 5px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    color: #fff !important;
+    border: unset;
+    text-align: right;
+    margin-left: 30%;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .proceedbutton button {
+    background-color: #97005e;
+    display: block !important;
+    padding: 5px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    color: #fff !important;
+    border: unset;
+    text-align: right;
+    margin-left: 20%;
+    margin-top: 15px;
+  }
+}
+
+.regionPopupBody .modal-body {
+  height: unset !important;
+}
+
+.site-en .asite {
+  display: none !important;
+}
+
+.site-ar .esite {
+  display: none !important;
+}
+
+a {
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

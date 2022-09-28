@@ -1,0 +1,159 @@
+/* Font Color  */
+/* Box Shadow */
+/* Scroll */
+/* Media Query for Max-width */
+/* Media Query for Min-width */
+/* Media Query for Min & Max Width */
+/* Media Query for Max Height */
+/* Media Query for Min Height */
+/*======= Flex Functions and Prefix Start */
+/* Flex - Justify , Align */
+/*  Flex Justify */
+/*  Flex - Align */
+/* Flex Direction */
+/*======= Flex Functions and Prefix End */
+/*======= Position Property Start */
+/* Position Absolute Center */
+/* Position Zero */
+/*======= Position Property End */
+/*  Custom Overlay */
+/*  Transition */
+/*  ::before */
+/* Main Text */
+.hp-bookingSearch {
+  padding-top: 45px;
+  min-height: 280px;
+  padding-bottom: 25px;
+  background: #000000 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .hp-bookingSearch {
+    min-height: 308px;
+    padding-bottom: 65px;
+  }
+}
+
+.hp-bookingSearch input:-webkit-autofill,
+.hp-bookingSearch input:-webkit-autofill:hover,
+.hp-bookingSearch input:-webkit-autofill:focus textarea:-webkit-autofill,
+.hp-bookingSearch textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+.hp-bookingSearch select:-webkit-autofill,
+.hp-bookingSearch select:-webkit-autofill:hover,
+.hp-bookingSearch select:-webkit-autofill:focus {
+  -webkit-box-shadow: transparent !important;
+}
+
+.hp-bookingSearch .hp-SearchTitle p {
+  text-align: center;
+  font: normal normal bold 16px/62px Poppins;
+  letter-spacing: 2.4px;
+  color: #ffffff;
+  opacity: 1;
+  font-family: Poppins-Bold;
+  text-transform: uppercase;
+}
+
+.hp-bookingSearch .nav {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hp-bookingSearch .nav-link {
+  text-align: center;
+  font: normal normal 600 16px/62px Poppins;
+  color: #ffffff;
+  opacity: 1;
+  font-family: Poppins-SemiBold;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .hp-bookingSearch .nav-link {
+    letter-spacing: 2.4px;
+  }
+}
+
+.hp-bookingSearch .nav-link.active {
+  text-align: center;
+  font: normal normal 600 16px/62px Poppins;
+  color: #97005e;
+  opacity: 1;
+  font-family: Poppins-SemiBold;
+}
+
+@media (min-width: 768px) {
+  .hp-bookingSearch .nav-link.active {
+    letter-spacing: 2.4px;
+  }
+}
+
+.hp-bookingSearch .form-control:focus {
+  color: #ffffff;
+  background-color: transparent;
+  border-color: transparent;
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-bottom: 1px solid #97005e;
+}
+
+.hp-bookingSearch input {
+  border: none;
+  border-bottom: 1px solid #97005e;
+  background: transparent;
+  border-radius: 0;
+  margin: 0 auto;
+  font: normal normal normal 16px Poppins;
+  letter-spacing: 1.4px;
+  color: #ffffff;
+  font-family: Poppins-Regular;
+  padding-left: 0;
+}
+
+@media (min-width: 768px) {
+  .hp-bookingSearch input {
+    width: 60%;
+  }
+}
+
+.hp-bookingSearch .listSearch {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .hp-bookingSearch .listSearch {
+    width: 60%;
+  }
+}
+
+.hp-bookingSearch .listSearch button {
+  margin: 8px 0;
+  padding: 5px 30px;
+  background-color: #96075e;
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.hp-bookingSearch .invalidDataMsg {
+  text-align: left;
+  font: normal normal 600 16px/62px Poppins;
+  letter-spacing: 1.4px;
+  color: #96075e;
+  opacity: 1;
+  font-family: "Poppins-Regular";
+}
+/*# sourceMappingURL=style.css.map */

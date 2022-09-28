@@ -1,0 +1,169 @@
+a,
+button {
+   cursor: pointer;
+}
+.bannerSection {
+   background-image: url(.././images/banners/banner-background.png);
+   width: auto;
+   height: 450px;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
+   .carousel-item {
+      height: 450px;
+      .middleImg {
+         width: 100vw;
+         position: absolute;
+         left: 0;
+         bottom: 0px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         // @media (max-width: 767px) {
+         //    width: 293px;
+         //    height: 200px;
+         //    left: 15%;
+         //    bottom: 22%;
+         // }
+      }
+      .carouselcontent {
+         position: absolute;
+         width: 90vw;
+         bottom: 30%;
+         display: flex;
+         justify-content: space-around;
+         align-items: baseline;
+         .contentPara {
+            p {
+               text-align: left;
+               font: normal normal normal 32px/36px Poppins;
+               letter-spacing: 0px;
+               color: #ffffff;
+               opacity: 1;
+               font-family: Poppins-Medium;
+            }
+            h2 {
+               text-align: center;
+               font: normal normal normal 24px/36px Poppins;
+               letter-spacing: 0px;
+               color: #ffffff;
+               font-family: Poppins-Regular;
+            }
+         }
+         .contentBtn {
+            display: flex;
+            cursor: pointer;
+            z-index: 99;
+            button {
+               cursor: pointer;
+               width: 128px;
+               height: 128px;
+               background: #ffffff 0% 0% no-repeat padding-box;
+               opacity: 1;
+               border-radius: 50%;
+               white-space: break-spaces;
+               text-align: center;
+               font: normal normal 600 16px/18px Poppins;
+               letter-spacing: 0px;
+               color: #97005e;
+               text-transform: uppercase;
+               opacity: 1;
+               font-family: Poppins-SemiBold;
+            }
+         }
+      }
+   }
+
+   .carousel-indicators {
+      justify-content: flex-end;
+      right: -180px;
+   }
+
+   .carousel-indicators li {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #ffffff;
+   }
+   .carousel-indicators .active {
+      background: #97005e;
+      border-radius: 4px !important;
+      width: 30px;
+   }
+}
+
+// mobile banner begins here
+.bannerSectionMobile {
+   background-image: url(.././images/banners/banner-background.png);
+   width: auto;
+   min-height: 352px;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
+   .carousel-inner {
+      .carouselcontentMob {
+         display: flex;
+         align-items: center;
+         justify-content: flex-end;
+         flex-direction: column;
+         min-height: 352px;
+         .mobBannerImg {
+            width: 293px;
+            height: 218px;
+            position: relative;
+            top: 80px;
+            z-index: 0;
+            img {
+               width: 100%;
+               height: 100%;
+            }
+         }
+         .mobBannerContent {
+            width: -webkit-fill-available;
+            height: 221px;
+            background-image: url(.././images/banners/content-bg.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            backdrop-filter: blur(1.2px);
+            .contentPara {
+               p {
+                  text-align: center;
+                  font: normal normal normal 24px/35px Poppins;
+                  letter-spacing: 0px;
+                  color: #ffffff;
+                  opacity: 1;
+                  font-family: Poppins-Regular;
+                  margin-bottom: 0;
+               }
+               h2 {
+                  text-align: center;
+                  font: normal normal normal 24px/36px Poppins;
+                  letter-spacing: 0px;
+                  color: #ffffff;
+                  font-family: Poppins-Regular;
+               }
+            }
+            .contentBtn {
+               margin: 26px auto 0;
+               button {
+                  background: #97005e 0% 0% no-repeat padding-box;
+                  border-radius: 22px;
+                  opacity: 1;
+                  text-align: center;
+                  font: normal normal 600 14px Poppins;
+                  letter-spacing: 2.1px;
+                  color: #ffffff;
+                  text-transform: uppercase;
+                  opacity: 1;
+                  font-family: Poppins-SemiBold;
+                  padding: 15px 20px;
+               }
+            }
+         }
+      }
+   }
+}
+// mobile banner ends here

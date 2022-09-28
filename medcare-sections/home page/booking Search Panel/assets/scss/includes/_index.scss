@@ -1,0 +1,107 @@
+.hp-bookingSearch {
+   padding-top: 45px;
+   min-height: 280px;
+   padding-bottom: 25px;
+   @media (min-width: 768px) {
+      min-height: 308px;
+      padding-bottom: 65px;
+   }
+   background: #000000 0% 0% no-repeat padding-box;
+   opacity: 1;
+
+   // to ignore the blue color background on autofill
+   input:-webkit-autofill,
+   input:-webkit-autofill:hover,
+   input:-webkit-autofill:focus textarea:-webkit-autofill,
+   textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+   select:-webkit-autofill,
+   select:-webkit-autofill:hover,
+   select:-webkit-autofill:focus {
+      -webkit-box-shadow: transparent !important;
+   }
+   .hp-SearchTitle {
+      p {
+         text-align: center;
+         font: normal normal bold 16px/62px Poppins;
+         letter-spacing: 2.4px;
+         color: #ffffff;
+         opacity: 1;
+         font-family: Poppins-Bold;
+         text-transform: uppercase;
+      }
+   }
+   .nav {
+      justify-content: center;
+   }
+   .nav-link {
+      text-align: center;
+      font: normal normal 600 16px/62px Poppins;
+      @media (min-width: 768px) {
+         letter-spacing: 2.4px;
+      }
+      color: #ffffff;
+      opacity: 1;
+      font-family: Poppins-SemiBold;
+      padding: 0 1rem;
+   }
+   .nav-link.active {
+      text-align: center;
+      font: normal normal 600 16px/62px Poppins;
+      @media (min-width: 768px) {
+         letter-spacing: 2.4px;
+      }
+      color: #97005e;
+      opacity: 1;
+      font-family: Poppins-SemiBold;
+   }
+   .form-control:focus {
+      color: #ffffff;
+      background-color: transparent;
+      border-color: transparent;
+      outline: 0;
+      box-shadow: none;
+      border-bottom: 1px solid #97005e;
+   }
+   input {
+      border: none;
+      border-bottom: 1px solid #97005e;
+      background: transparent;
+      border-radius: 0;
+      @media (min-width: 768px) {
+         width: 60%;
+      }
+      margin: 0 auto;
+      font: normal normal normal 16px Poppins;
+      letter-spacing: 1.4px;
+      color: #ffffff;
+      font-family: Poppins-Regular;
+      padding-left: 0;
+   }
+   .listSearch {
+      width: 100%;
+      @media (min-width: 768px) {
+         width: 60%;
+      }
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      button {
+         margin: 8px 0;
+         padding: 5px 30px;
+         background-color: #96075e;
+         color: #fff !important;
+         text-decoration: none;
+         border-radius: 25px;
+         font-size: 14px;
+         cursor: pointer;
+      }
+   }
+   .invalidDataMsg {
+      text-align: left;
+      font: normal normal 600 16px/62px Poppins;
+      letter-spacing: 1.4px;
+      color: #96075e;
+      opacity: 1;
+      font-family: "Poppins-Regular";
+   }
+}

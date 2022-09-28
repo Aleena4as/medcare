@@ -1,0 +1,28 @@
+@media (max-width: 767px) {
+   .linksSection {
+      display: none;
+   }
+}
+@media (min-width: 768px) {
+   .navbarSupportedContent {
+      display: none;
+   }
+   .main2div a {
+      padding: 0;
+      display: inline-block;
+   }
+   .site-en .main1div {
+      float: none;
+   }
+   .linksSection {
+      display: flex;
+      margin-left: 15%;
+   }
+   .searchIconMenu {
+      display: none;
+   }
+   .searchIconPadding {
+      display: block;
+   }
+}
+

@@ -1,0 +1,28 @@
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+   background-color: #97005e !important;
+   color: #fff;
+}
+.glyphicon {
+   color: #97005e !important;
+   font-size: 20px;
+}
+.bootstrap-datetimepicker-widget {
+   .btn-primary {
+      color: #fff;
+      background-color: #97005e !important;
+      border: 1px solid #97005e !important;
+      outline: none !important;
+      box-shadow: none !important;
+   }
+}
+.bootstrap-datetimepicker-widget table td.today:before {
+   border-bottom-color: #97005e !important;
+}
+.bootstrap-datetimepicker-widget {
+   padding: 20px 15px 5px !important;
+   width: 350px !important;
+}
+.bootstrap-datetimepicker-widget table th.prev::after {
+   content: "hai" !important;
+}

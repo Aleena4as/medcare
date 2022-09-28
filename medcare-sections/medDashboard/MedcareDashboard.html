@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
+    <title>Medcare Dashboard</title>
+
+    <!-- datepicker begins here -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <link rel="stylesheet" href="./assets/css/datepickerUI.css">
+    <!-- datepicker ends here -->
+
+
+    <!-- date range picker begins -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <!-- date range picker ends -->
+
+    <link rel="stylesheet" href="./assets/fonts/poppins/stylesheet.css">
+    <link href="./assets/scss/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- for filter calendar begins-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.42/css/bootstrap-datetimepicker.min.css">
+    <!-- for filter calendar ends-->
+
+    <!-- for loaction map icons-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+
+
+</head>
+
+<body>
+    <div class="container-fluid p-0 med-DashboardContainer">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-header">
+                    <a href="https://www.medcare.ae/en" target="_blank">
+                        <img src="./assets/images/dashboard/header/logo.svg" alt="">
+                    </a>
+                    <div class="linkLeadsBoard">
+                        <a href="https://medcare.ae/medcare_api/REST/medcare-leads/admin/login" class="linkLine">Leads
+                            Dashboard</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="d-verticalNavbar">
+                    <div class="tab">
+                        <div class="tablinks" onclick="openVerticalNav(event, 'Dashboard')" id="defaultOpen">
+                            <img class="whiteImg" src="./assets/images/dashboard/verticalNav/home.svg" alt="">
+                            <img class="blackImg" src="./assets/images/dashboard/verticalNav/formData_black.svg" alt="">
+                            <p>Dashboard</p>
+                        </div>
+                        <div class="tablinks disabledforNow" onclick="openVerticalNav(event, 'Admin')">
+                            <img class="whiteImg" src="./assets/images/dashboard/verticalNav/home.svg" alt="">
+                            <img class="blackImg" src="./assets/images/dashboard/verticalNav/admin_black.svg" alt="">
+                            <p>Admin</p>
+                        </div>
+                        <div class="tablinks disabledforNow" onclick="openVerticalNav(event, 'FormData')">
+                            <img class="whiteImg" src="./assets/images/dashboard/verticalNav/home.svg" alt="">
+                            <img class="blackImg" src="./assets/images/dashboard/verticalNav/formData_black.svg" alt="">
+                            <p>Form Data</p>
+                        </div>
+                        <div class="tablinks disabledforNow" onclick="openVerticalNav(event, 'LogOut')">
+                            <img class="whiteImg" src="./assets/images/dashboard/verticalNav/home.svg" alt="">
+                            <img class="blackImg" src="./assets/images/dashboard/verticalNav/logout_black.svg" alt="">
+                            <p>Log Out</p>
+                        </div>
+                    </div>
+
+                    <div id="Dashboard" class="tabcontent">
+                        <div class="d-horizontalTabs">
+                            <div class="horiTab">
+                                <button class="horiTablinks" onclick="openHorizontalNav(event, 'Report')"
+                                    id="horidefaultOpen">Report</button>
+                                <button class="horiTablinks disabledforNow"
+                                    onclick="openHorizontalNav(event, 'KPIs Statistics')">KPIs
+                                    Statistics</button>
+                                <button class="horiTablinks" id="openEvents"
+                                    onclick="openHorizontalNav(event, 'EventCalendar')">Calendar</button>
+                            </div>
+
+                            <div id="Report" class="horiTabcontent">
+                                <div class="topBox">
+                                    <p class="headingMain">Report</p>
+
+                                    <div id="reportrange" class="reportRange">
+                                        <i class="fa fa-calendar"></i>&nbsp;
+                                        <span></span> <i class="fa fa-caret-down"></i>
+                                    </div>
+                                </div>
+                                <div class="report-container" id="report-container">
+                                    <div class="row">
+                                        <div class="col-12 col-md-4">
+                                            <div class="h-requestwrap appointmentRequest">
+                                                <p class="box-title">
+                                                    Total Appointment Request
+                                                </p>
+                                                <p class="boxlargeCount">1,466</p>
+                                                <div class="d-openPage">
+                                                    <a href="#">
+                                                        <img src="./assets/images/dashboard/general/arrowLink.svg"
+                                                            alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <div class="h-requestwrap leadsOpen">
+                                                <p class="box-title">
+                                                    Total Leads Open
+                                                </p>
+                                                <p class="boxlargeCount">5</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <div class="h-requestwrap leadsTotal">
+                                                <div class="leadsTab">
+                                                    <button class="leadsTablinks"
+                                                        onclick="switchLeads(event, 'Confirmed')"
+                                                        id="leadsdefaultOpen">Confirmed</button>
+                                                    <button class="leadsTablinks"
+                                                        onclick="switchLeads(event, 'Cancelled')">Cancelled</button>
+                                                </div>
+                                                <div id="Confirmed" class="leadsTabcontent">
+                                                    <p class="box-title">
+                                                        Total Leads Confirmed
+                                                    </p>
+                                                    <p class="boxlargeCount">122</p>
+                                                    <div class="d-openPage">
+                                                        <a href="#">
+                                                            <img src="./assets/images/dashboard/general/arrowLink.svg"
+                                                                alt="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div id="Cancelled" class="leadsTabcontent">
+                                                    <p class="box-title">
+                                                        Total Leads Cancelled
+                                                    </p>
+                                                    <p class="boxlargeCount">12</p>
+                                                    <div class="d-openPage">
+                                                        <a href="#">
+                                                            <img src="./assets/images/dashboard/general/arrowLink.svg"
+                                                                alt="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="KPIs Statistics" class="horiTabcontent">
+                                <p class="headingMain">KPIs Statistics</p>
+                            </div>
+
+                            <div id="EventCalendar" class="horiTabcontent">
+                                <p class="headingMain">Calendar</p>
+
+                                <div id="getEventsCalendar">
+                                    <div class="panel panel-default hidden-print">
+                                        <div class="panel-body">
+
+                                            <div class="col-md-4">
+                                                <!-- <label for="calendar_view">Filter Eventy Type</label> -->
+                                                <div class="input-group">
+                                                    <select class="filter" id="type_filter" multiple="multiple">
+                                                        <option value="Covid test @Home">Covid test @Home</option>
+                                                        <option value="Lab test @Home">Lab test @Home</option>
+                                                        <option value="Vaccination @Home">Vaccination @Home</option>
+                                                        <option value="Nurse @Home">Nurse @Home</option>
+                                                        <option value="Doctor @Home">Doctor @Home</option>
+                                                        <option value="Physio @Home">Physio @Home</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <!-- <label for="calendar_view">Filter Calendars</label> -->
+                                                <div class="input-group">
+                                                    <select class="filter" id="calendar_filter" multiple="multiple">
+                                                        <option value="Dubai">Dubai</option>
+                                                        <option value="Sharjah">Sharjah</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 calendarRightOpts">
+                                                <div class="input-group">
+                                                    <label class="checkbox-inline"><input class='filter' type="checkbox"
+                                                            value="Online Booking" checked>Online Booking</label>
+
+                                                    <label class="checkbox-inline"><input class='filter' type="checkbox"
+                                                            value="Manual Booking" checked>Manual Booking</label>
+                                                </div>
+
+                                                <button type="button" class="d-addNewBtn" data-toggle="modal"
+                                                    data-target="#checkAvailability">Add New</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div id="wrapper">
+                                        <div id="loading"></div>
+                                        <div class="print-visible" id="calendar"></div>
+                                    </div>
+
+
+                                    <!-- EDIT EVENT MODAL -->
+
+                                    <div class="modal fade appointmentModals" tabindex="-1" role="dialog"
+                                        id="editEventModal">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <img src="./assets/images/dashboard/general/IconClose.svg"
+                                                            alt="">
+                                                    </button>
+                                                    <h4 class="modal-title">Edit <span class="eventName"></span></h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-xs-12 customRow">
+                                                            <label class="col-xs-4" for="title">All Day Event ?</label>
+                                                            <input class='allDayEdit' type="checkbox"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-12 customRow">
+                                                            <label class="col-xs-4" for="title">Event title</label>
+                                                            <select class="inputModal" type="text" name="editTitle"
+                                                                id="editTitle">
+                                                                <option value="Covid test @Home">Covid test @Home
+                                                                </option>
+                                                                <option value="Lab test @Home">Lab test @Home</option>
+                                                                <option value="Vaccination @Home">Vaccination @Home
+                                                                </option>
+                                                                <option value="Nurse @Home">Nurse @Home</option>
+                                                                <option value="Doctor @Home">Doctor @Home</option>
+                                                                <option value="Physio @Home">Physio @Home</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-xs-12 customRow">
+                                                            <label class="col-xs-4" for="starts-at">Starts at</label>
+                                                            <input class="inputModal" type="text" name="editStartDate"
+                                                                id="editStartDate" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-12 customRow">
+                                                            <label class="col-xs-4" for="ends-at">Ends at</label>
+                                                            <input class="inputModal" type="text" name="editEndDate"
+                                                                id="editEndDate" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-12 customRow">
+                                                            <label class="col-xs-4"
+                                                                for="edit-calendar-type">Calendar</label>
+                                                            <select class="inputModal" type="text"
+                                                                name="edit-calendar-type" id="edit-calendar-type">
+                                                                <option value="Dubai">Dubai</option>
+                                                                <option value="Sharjah">Sharjah</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-12 customRow">
+                                                            <label class="col-xs-4"
+                                                                for="edit-event-desc">Description</label>
+                                                            <textarea rows="4" cols="50" class="inputModal"
+                                                                name="edit-event-desc" id="edit-event-desc"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn generalBtn" id="deleteEvent">Delete
+                                                        Event</button>
+                                                    <button type="button" class="btn generalBtn" id="updateEvent">Save
+                                                        changes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <!-- pop up contents for new booking begins here -->
+                            <div class="modal fade appointmentModals" id="locateAddress">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                <img src="./assets/images/dashboard/general/IconClose.svg" alt="">
+                                            </button>
+                                            <h4 class="modal-title">New Appointment</h4>
+                                        </div>
+                                        <form action="./MedcareDashboard.html" id="addnewBookingForm"
+                                            autocomplete="off">
+                                            <div class="modal-body">
+                                                <!-- presonal details begins  -->
+                                                <section class="hs-addressDetails">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="section-title">
+                                                                <p>1.Personal Details</p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="patient-Name">Name</label>
+                                                                <input type="text" class="form-control"
+                                                                    name="patient-Name" id="patient-Name"
+                                                                    placeholder="Enter patient's name"
+                                                                    autocomplete="off"
+                                                                    onkeypress="return /[a-z]/i.test(event.key)">
+                                                                <div class="errorMsg">
+                                                                    <p id="d-error1" class="patient-error"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="patient-EmiratesId">Emirates Id</label>
+                                                                <input type="text"
+                                                                    class="form-control emiratesId-format"
+                                                                    placeholder="000-0000-0000000-0"
+                                                                    name="patient-EmiratesId" id="patient-EmiratesId"
+                                                                    autocomplete="off"
+                                                                    onkeypress="return isNumber(event)">
+                                                                <div class="errorMsg">
+                                                                    <p id="d-error2" class="patient-error"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="patient-Email">Email</label>
+                                                                <input type="email" class="form-control"
+                                                                    name="patient-Email" id="patient-Email"
+                                                                    placeholder="Enter patient's email"
+                                                                    autocomplete="off">
+                                                                <div class="errorMsg">
+                                                                    <p id="d-error3" class="patient-error"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="patient-Mobilenum">Mobile Number</label>
+                                                                <div class="mobWithCode">
+                                                                    <input type="text" id="patientCountryCode"
+                                                                        class="countrycodeInput"
+                                                                        name="patientCountryCode" value="+971">
+                                                                    <input type="text" class="form-control"
+                                                                        name="patient-Mobilenum" id="patient-Mobilenum"
+                                                                        maxlength="15"
+                                                                        placeholder="Enter patient's mobile"
+                                                                        onkeypress="return isNumber(event)"
+                                                                        autocomplete="off">
+                                                                </div>
+                                                                <div class="errorMsg">
+                                                                    <p id="d-error4" class="patient-error"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <!-- presonal details ends  -->
+
+                                                <!-- location Details begins  -->
+                                                <section class="hs-addressDetails">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="section-title">
+                                                                <p>2.Location Details</p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-group inputIconPlacer userlocation">
+                                                                <label for="patient-location">Address</label>
+                                                                <input type="text" class="form-control" value=""
+                                                                    name="patient-location" id="patient-location"
+                                                                    placeholder="location here">
+                                                                <span class="input-group-btns">
+                                                                    <button class="btn " id="geolocateButton"
+                                                                        type="button" data-toggle="tooltip"
+                                                                        data-placement="top">
+                                                                        <i class="fa fa-location-arrow"
+                                                                            aria-hidden="true"></i>
+                                                                    </button>
+                                                                </span>
+                                                                <input type="hidden" class="form-control" id="latText"
+                                                                    name="lat" readonly data-geo="lat" hidden>
+                                                                <input type="hidden" class="form-control" id="lngText"
+                                                                    name="lng" readonly data-geo="lng" hidden>
+                                                                <input type="hidden" class="form-control" id="zoomText"
+                                                                    name="zoom" min="1" max="23" step="1" value="11"
+                                                                    data-geo="zoom" hidden>
+
+                                                                <div class="errorMsg">
+                                                                    <p id="d-error5" class="patient-error"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+
+                                                            <div id="map-container">
+                                                                <div id="map-container-inner">
+                                                                    <div id="map"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="patient-villaNo">Apt / Villa Number</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter patient apt / villa number"
+                                                                    name="patient-villaNo" id="patient-villaNo">
+                                                                <div class="errorMsg">
+                                                                    <p id="d-error6" class="patient-error"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="patient-buildingNo">Building / Premise
+                                                                    Name</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter patient building/premise name"
+                                                                    name="patient-buildingNo" id="patient-buildingNo">
+                                                                <div class="errorMsg">
+                                                                    <p id="d-error7" class="patient-error"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="patient-streetNo">Area / Street Name</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter patient area/street name"
+                                                                    name="patient-streetNo" id="patient-streetNo">
+                                                                <div class="errorMsg">
+                                                                    <p id="d-error8" class="patient-error"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="hs-select">
+                                                                <div class="form-group">
+                                                                    <label for="patient-SelectEmirate">Emirate</label>
+                                                                    <select class="form-control"
+                                                                        name="patient-SelectEmirate"
+                                                                        id="patient-SelectEmirate">
+                                                                        <option value="" selected disabled>Select
+                                                                            patient
+                                                                            emirates
+                                                                        </option>
+                                                                        <option value="Dubai">Dubai</option>
+                                                                        <option value="Sharjah">Sharjah</option>
+                                                                        <option value="Abu Dhabi">Abu Dhabi</option>
+                                                                        <option value="Ras Al Khaimah">Ras Al Khaimah
+                                                                        </option>
+                                                                        <option value="Fujairah">Fujairah</option>
+                                                                        <option value="Ajman">Ajman</option>
+                                                                        <option value="Um Al Qwain">Um Al Qwain</option>
+                                                                    </select>
+                                                                    <div class="errorMsg">
+                                                                        <p id="d-error9" class="patient-error"></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </section>
+                                                <!-- booking details begins -->
+                                                <section class="hs-addressDetails">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="section-title">
+                                                                <p>3.Booking Details</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="hs-select">
+                                                                <div class="form-group">
+                                                                    <label for="patient-BookService">Home
+                                                                        Service</label>
+                                                                    <select class="form-control"
+                                                                        name="patient-BookService"
+                                                                        id="patient-BookService">
+                                                                        <option value="" selected disabled>Select
+                                                                            patient home service</option>
+                                                                        <option value="Covid test @Home">Covid test
+                                                                            @Home
+                                                                        </option>
+                                                                        <option value="Lab @Home">Lab @Home</option>
+                                                                        <option value="Vaccination @Home">Vaccination
+                                                                            @Home
+                                                                        </option>
+                                                                        <option value="Nurse @Home">Nurse @Home</option>
+                                                                        <option value="Doctor @Home">Doctor @Home
+                                                                        </option>
+                                                                        <option value="Physio @Home">Physio @Home
+                                                                        </option>
+                                                                    </select>
+                                                                    <div class="errorMsg">
+                                                                        <p id="d-error10" class="patient-error"></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="hs-select">
+                                                                <div class="form-group">
+                                                                    <label for="patient-newBookingDate">Appointment
+                                                                        Date</label>
+                                                                    <input class="form-control"
+                                                                        name="patient-newBookingDate"
+                                                                        id="patient-newBookingDate" />
+                                                                    <div class="errorMsg">
+                                                                        <p id="d-error11" class="patient-error"></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="hs-select">
+                                                                <div class="form-group">
+                                                                    <label for="patient-Timeslot">Time Slot</label>
+                                                                    <select class="form-control" name="patient-Timeslot"
+                                                                        id="patient-Timeslot">
+                                                                        <option value="" selected disabled>Select
+                                                                            patient's
+                                                                            slot</option>
+                                                                        <option value="8-9AM">8-9AM</option>
+                                                                        <option value="9-10AM">9-10AM</option>
+                                                                        <option value="10-11AM">10-11AM</option>
+                                                                        <option value="11-12AM">11-12AM</option>
+                                                                        <option value="12-1PM">12-1PM</option>
+                                                                        <option value="1-2PM">1-2PM</option>
+                                                                        <option value="2-3PM">2-3PM</option>
+                                                                        <option value="3-4PM">3-4PM</option>
+                                                                    </select>
+                                                                    <div class="errorMsg">
+                                                                        <p id="d-error12" class="patient-error"></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="generalBtn"
+                                                    id="saveNewAppointment">Save</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- pop up contents for new booking begins here -->
+                            <!-- pop up for checkavailability begins here -->
+                            <div class="modal fade appointmentModals" id="checkAvailability" role="dialog">
+                                <div class="modal-dialog ">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                <img src="./assets/images/dashboard/general/IconClose.svg" alt="">
+                                            </button>
+                                            <h4 class="modal-title">New Appointment</h4>
+                                        </div>
+                                        <form action="./MedcareDashboard.html" id="formAvailabilityCheck"
+                                            autocomplete="off">
+                                            <div class="modal-body">
+                                                <!-- check for the date availability begins  -->
+                                                <section class="hs-addressDetails">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group inputIconPlacer ">
+                                                                <label for="patientDateCheck">Date</label>
+                                                                <input type="text" name="patientDateCheck"
+                                                                    id="patientDateCheck" class="form-control datefixer"
+                                                                    placeholder="DD/MM/YYYY">
+                                                                <div class="errorMsg" autocomplete="off">
+                                                                    <p id="d-checkerror1" class="check-error"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <div class="hs-select">
+                                                                <div class="form-group">
+                                                                    <label for="patientSlotCheck">Time Slot</label>
+                                                                    <select class="form-control" name="patientSlotCheck"
+                                                                        id="patientSlotCheck">
+                                                                        <option value="" selected disabled>Select
+                                                                            patient's
+                                                                            slot</option>
+                                                                        <option value="8-9AM">8-9AM</option>
+                                                                        <option value="9-10AM">9-10AM</option>
+                                                                        <option value="10-11AM">10-11AM</option>
+                                                                        <option value="11-12AM">11-12AM</option>
+                                                                        <option value="12-1PM">12-1PM</option>
+                                                                        <option value="1-2PM">1-2PM</option>
+                                                                        <option value="2-3PM">2-3PM</option>
+                                                                        <option value="3-4PM">3-4PM</option>
+                                                                    </select>
+                                                                    <div class="errorMsg">
+                                                                        <p id="d-checkerror2" class="check-error"></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="hs-select">
+                                                                <div class="form-group">
+                                                                    <label for="patientServiceCheck">Home
+                                                                        Service</label>
+                                                                    <select class="form-control"
+                                                                        name="patientServiceCheck"
+                                                                        id="patientServiceCheck">
+                                                                        <option value="" selected disabled>Select
+                                                                            patient home service</option>
+                                                                        <option value="Covid test @Home">Covid test
+                                                                            @Home
+                                                                        </option>
+                                                                        <option value="Lab @Home">Lab @Home</option>
+                                                                        <option value="Vaccination @Home">Vaccination
+                                                                            @Home
+                                                                        </option>
+                                                                        <option value="Nurse @Home">Nurse @Home</option>
+                                                                        <option value="Doctor @Home">Doctor @Home
+                                                                        </option>
+                                                                        <option value="Physio @Home">Physio @Home
+                                                                        </option>
+                                                                    </select>
+                                                                    <div class="errorMsg">
+                                                                        <p id="d-checkerror3" class="check-error"></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <!-- check for the date availability ends  -->
+
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="generalBtn "
+                                                    id="retrieveNewAppointment">Check Availability</button>
+                                                <button type="reset" class="generalBtn" style="display: none;"
+                                                    id="gotoCheck">Back</button>
+                                                <button type="button" class="generalBtn" data-toggle="modal"
+                                                    data-target="#locateAddress" data-dismiss="modal"
+                                                    style="display: none;" id="proceedToAppointment">Proceed</button>
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- pop up for checkavailability ends here -->
+
+                        </div>
+                    </div>
+
+                    <div id="Admin" class="tabcontent">
+                        <p class="headingMain">Admin Panel</p>
+                    </div>
+                    <div id="FormData" class="tabcontent">
+                        <p class="headingMain">Form Data Panel</p>
+                    </div>
+                    <div id="LogOut" class="tabcontent">
+                        <p class="headingMain">Successfully Logged Out.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- daterange picker begins here -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <!-- daterange picker ends here -->
+
+
+    <script src="./assets/js/dashboard/verticalNav.js"></script>
+    <script src="./assets/js/dashboard/horizontalNav.js"></script>
+    <script src="./assets/js/dashboard/leadsNav.js"></script>
+    <script src="./assets/js/dashboard/dateRange.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./assets/js/dashboard/datepickerUI.js"></script>
+
+    <!-- for filterCalendar begins -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/locale-all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+    <script src="./assets/js/dashboard/calendarWithFilter.js"></script>
+
+    <!-- for filterCalendar ends here -->
+    <!-- for location map begins here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSJQtrAKJX7YUxL4jpqBayh9f-LJ4tu2k&libraries=places"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.min.js"></script>
+    <script src="./assets/js/dashboard/patientMap.js"></script>
+    <!-- for location map ends here -->
+
+    <!-- form validation begins -->
+    <script src="./assets/js/dashboard/newAppointmentvalidation.js"></script>
+    <script src="./assets/js/dashboard/validationsGeneral.js"></script>
+    <script src="./assets/js/dashboard/checkAvailabilityValidation.js"></script>
+
+
+</body>
+
+</html>
